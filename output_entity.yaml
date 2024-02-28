@@ -1,0 +1,38 @@
+identity: http://onto-ns.com/meta/matchmaker/1.0/Volumetric_dosages
+description: The volumetric dosages of the components of the concrete computed from the initial water-to-cement mass ratio and the degree of hydration of the cement. The model also considers the elastic and strength properties of the cement constituents, the characteristic shape and size of the cement constituents, and the mode of interaction at the scale of observation of the cement constituents. The model is based on the work of Bazant and Kaplan (1996).
+dimensions:
+  w-c_range: The calculation parameter range for the initial water-to-cement mass ratio.
+  hydration_degree_range: The calculation parameter range for the degree of hydration of the cement.
+properties:
+  # Parameter inputs
+  w-c_input:
+    type: float
+    description: The initial water-to-cement (w/c) mass ratio.
+    shape: [w-c_range]
+  hydration_degree_input:
+    type: float
+    description: The degree of hydration (ξ) of the cement.
+    shape: [hydration_degree_range]
+
+  # Calculated outputs
+  f_clinker:
+    type: float
+    description: The fraction of clinker in the cement.
+    shape: [w-c_range, hydration_degree_range]
+  f_water:
+    type: float
+    description: The fraction of water in the cement.
+    shape: [w-c_range, hydration_degree_range]
+  f_hydrates:
+    type: float
+    description: The fraction of hydrates in the cement.
+    shape: [w-c_range, hydration_degree_range]
+  f_air:
+    type: float
+    description: The fraction of air in the cement.
+    shape: [w-c_range, hydration_degree_range]
+  strength_of_cement_paste:
+    type: float
+    description: The strength of the cement paste. Uniaxial compressive strength of cement paste in MPa.
+    shape: [w-c_range, hydration_degree_range]
+    unit: MPa

@@ -1,0 +1,76 @@
+identity: http://onto-ns.com/meta/matchmaker/1.0/Strength_modelling_OPC_input
+description: The input parameters for the strength modelling of Ordinary Portland Cement (OPC). The model computes the strength of the cement paste from the initial water-to-cement mass ratio and the degree of hydration of the cement. The model also considers the elastic and strength properties of the cement constituents, the characteristic shape and size of the cement constituents, and the mode of interaction at the scale of observation of the cement constituents. The model is based on the work of Bazant and Kaplan (1996).
+dimensions:
+  w-c_range: The calculation parameter range for the initial water-to-cement (w/c) mass ratio.
+  hydration_degree_range: The calculation parameter range for the degree of hydration (ξ) of the cement.
+  number_of_constituents: The number of constituents in the cement.
+  number_of_scales_of_observation: The number of scales of observation of the cement constituents.
+properties:
+  # 1) Material constants
+  # a) Elastic properties
+  constituents:
+    type: string
+    description: The constituents of the cement.
+    shape: [number_of_constituents]
+  bulk_modulus:
+    type: float
+    description: The bulk modulus (k) of the cement constituents.
+    shape: [number_of_constituents]
+    unit: GPa
+  shear_modulus:
+    type: float
+    description: The shear modulus (μ) of the cement constituents.
+    shape: [number_of_constituents]
+    unit: GPa
+
+  # b) Strength properties
+  deviatoric_strength:
+    type: float
+    description: The deviatoric strength (σ_hyd^dev) of the hydrates.
+    unit: MPa
+
+  # 2) Initial composition and maturity
+  w-c:
+    type: float
+    description: The initial water-to-cement (w/c) mass ratio.
+    shape: [w-c_range]
+  hydration_degree:
+    type: float
+    description: The degree of hydration (ξ) of the cement.
+    shape: [hydration_degree_range]
+
+  # 3) Characteristic shape of constituents
+  constituent_shape:
+    type: string
+    description: The characteristic shape of the cement constituents.
+    shape: [number_of_constituents]
+
+  # 4) Characteristic size of constituents and scale of observation
+  # Note: 'constituent_size_operator' and 'constituent_size_number' are to be interpreted in that specific order, e.g., '>=20' means the characteristic size of the constituent is greater than or equal to 20 μm.
+  constituent_size_operator:
+    type: string
+    description: The operator used to define the boundary of characteristic size of the cement constituents together with the 'constituent_size_number'.
+    shape: [number_of_constituents]
+  constituent_size_number:
+    type: float
+    description: The number used to define the boundary of the characteristic size of the cement constituents together with the 'constituent_size_operator'.
+    shape: [number_of_constituents]
+    unit: μm
+  constituent_scale:
+    type: string
+    description: The characteristic scale of observation of the cement constituents.
+    shape: [number_of_constituents]
+
+  # 5) Characteristic mode of interaction at specific scale of observation
+  mode_of_interaction_at_scale_name:
+    type: string
+    description: The name of the scale.
+    shape: [number_of_scales_of_observation]
+  mode_of_interaction_at_scale_for_constituent:
+    type: string
+    description: The mode of interaction at the scale of observation in the context of the cement constituents.
+    shape: [number_of_scales_of_observation]
+  mode_of_interaction_at_scale:
+    type: string
+    description: The mode of interaction at the scale of observation of the cement constituents.
+    shape: [number_of_scales_of_observation]

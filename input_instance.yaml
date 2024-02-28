@@ -1,0 +1,27 @@
+dimensions:
+  w-c_range: 3
+  hydration_degree_range: 7
+  number_of_constituents: 4
+  number_of_scales_of_observation: 2
+properties:
+  constituents: ['clinker', 'water', 'hydrates', 'air']
+  bulk_modulus: [116.58, 0, 18.69, 0]
+  shear_modulus: [53.81, 0, 11.76, 0]
+  deviatoric_strength: 69.90
+  w-c: [0.35, 0.4, 0.45]
+  hydration_degree: [0.35, 0.4, 0.55, 0.65, 0.71, 0.75, 0.8]
+  constituent_shape:
+    - 'spherical'
+    - 'spherical'
+    - 'needle-shaped, isotropically orientied in space'
+    - 'spherical'
+  constituent_size_operator: ['>=', '<', '<=', '<']
+  constituent_size_number: [20, 5, 5, 5]
+  constituent_scale: ['cement paste', 'hydrate foam', 'hydrate foam', 'hydrate foam']
+  mode_of_interaction_at_scale_name: ['cement paste', 'hydrate foam']
+  mode_of_interaction_at_scale_for_constituent:
+    - 'matrix phase = hydrate foam, inclusion phase = clinker'
+    - 'hydrates, water-filled and air-filled capillary pores'
+  mode_of_interaction_at_scale:
+    - 'matrix-inclusion interaction'
+    - 'direct phase interaction'

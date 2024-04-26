@@ -45,4 +45,4 @@ repos:
     hooks:
     - id: validate-entities
       additional_dependencies: [".[cli]"]
-      files: ^UC1/entities/.*\.yaml$
+      files: ^UC1/entities/.*$

@@ -55,10 +55,10 @@ jobs:
 
       - name: Validate Entities
         if: env.RELEVANT_ENTITIES == 'true'
-        run: cat entities.txt | entities-service validate --strict --format=yaml -
+        run: cat entities.txt | entities-service validate --strict --format=yaml --format=json -
 
       - name: Upload Entities
         if: env.RELEVANT_ENTITIES == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: cat entities.txt | entities-service upload --auto-confirm --strict --format=yaml -
+        run: cat entities.txt | entities-service upload --auto-confirm --strict --format=yaml --format=json -
         env:
           ENTITIES_SERVICE_ACCESS_TOKEN: ${{ secrets.ENTITIES_SERVICE_ACCESS_TOKEN }}

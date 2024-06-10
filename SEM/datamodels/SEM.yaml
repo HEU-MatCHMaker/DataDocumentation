@@ -1,0 +1,108 @@
+uri: http://onto-ns.com/meta/matchmaker/0.1/SEM_metadata
+description: SEM metadata model.
+dimensions:
+properties:
+  file_location:
+    type: string
+    description: "Where the raw image is stored."
+  file_type:
+    type: string
+    description: "Type of image, e.g., .tif, .jpg"
+  date:
+    type: string
+    description: "Date of acquisition, yyyy-mm-dd"
+  time:
+    type: string
+    description: "Time of acquisition, hh:mm:ss"
+  system_type:
+    type: string
+    description: "Type of imaging technique, e.g., SEM"
+  system_software:
+    type: string
+    description: "Version of system software"
+  system_source:
+    type: string
+    description: "Electron source, e.g., FEG."
+  system_column:
+    type: string
+    description: "? (Nicole)"
+  system_chamber:
+    type: string
+    description: "? (xT-SSB)"
+  system_stage_x:
+    type: int
+    description: "110 ?"
+  system_stage_y:
+    type: int
+    description: "110 ?"
+  system_system_type: # This is imperfect..
+    type: int
+    description: "Name of instrument, e.g., Apreo"
+  high_voltage: 
+    type: int
+    unit: V
+    description: "Electron acceleration voltage"
+  aperture_diameter:
+    type: float64
+    unit: m
+    description: "Diameter of the aperture"
+  horizontal_field_width:
+    type: float64
+    unit: m
+    description: ""
+  working_distance:
+    type: float64
+    unit: m
+    description: ""
+  beam_current:
+    type: float64
+    unit: A
+    description: ""
+  ebeam_use_case:
+    type: string
+    description: ""
+  ebeam_stage_x:
+    type: float64
+    unit: m
+    description: "X position relative to centre"
+  ebeam_stage_y:
+    type: float64
+    unit: m
+    description: "Y position relative to centre"
+  ebeam_stage_z:
+    type: float64
+    unit: m
+    description: "Z position relative to top of sample"
+  ebeam_stage_angle:
+    type: float64
+    unit: rad
+    description: "Rotation of sample stage"
+  scan_dwelltime:
+    type: float64
+    unit: s
+    description: "Dwelling time of each pixel during scan"
+  scan_pixel_width:
+    type: float64
+    description: ""
+  scan_pixel_height:
+    type: float64
+    description: ""
+  scan_frame_time:
+    type: float64
+    unit: s
+    description: "Scan time for the full frame"
+  escan_line_integration:
+    type: int
+    description: ""
+  image_resolution_x:
+    type: int
+    description: "Image resolution along x"
+  image_resolution_y:
+    type: int
+    description: "Image resolution along y"
+  detectors_name:
+    type: string
+    description: "Detecor's name, e.g., ETD"
+  detectors_mode:
+    type: string
+    description: "Detecor's mode, e.g., SE"

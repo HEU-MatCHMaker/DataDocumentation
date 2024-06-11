@@ -5,15 +5,13 @@ import configparser
 from PIL import Image
 from PIL.TiffTags import TAGS
 
-# Add new tags to TIFF
-TAGS[34682] = "ThermoFischer"
 
-def parse_ini(ini_str : str):
+def read_ini(fname : str):
     """
-    Parse a INI file from string to dict.
+    Parse a INI file from file to dict.
     """
     config = configparser.ConfigParser()
-    config.read_string(ini_str)
+    config.read(fname)
 
     # Convert to dict
     metadata = dict()
@@ -25,15 +23,15 @@ def parse_ini(ini_str : str):
     return metadata
 
 
-class ThermoFischerStorage(dlite.DLiteStorageBase):
-    """DLite storage plugin for a ThermoFischer SEM image."""
+class HitachiStorage(dlite.DLiteStorageBase):
+    """DLite storage plugin for a Hitachi SEM image."""
 
     with open(Path(__file__).resolve().parent.parent /
-          "ThermoFischer.json", "r") as f:
-        ThermoFischer = dlite.Instance.from_json(f.read())
+          "Hitachi.json", "r") as f:
+        Hitachi = dlite.Instance.from_json(f.read())
 
     def open(self, location, options=None):
-        """Opens ThermoFischer metadata
+        """Opens Hitachi metadata
 
         Arguments:
             location: Path to temperature profile data file.
@@ -48,7 +46,7 @@ class ThermoFischerStorage(dlite.DLiteStorageBase):
             id: Optional URI to assign to the new instance.
 
         Returns:
-            A new ThermoFisher instance with the loaded metadata
+            A new Hitachi instance with the loaded metadata
         """
 
         # Crash early if the file is not tif
@@ -57,30 +55,27 @@ class ThermoFischerStorage(dlite.DLiteStorageBase):
             raise Exception("File extension must be .tif")
 
         # Store img metadata with semantic tags, for example,
-        # 34682 -> ThermoFischer
+        # 34682 -> Hitachi
         with Image.open(self.location) as img:
             metadata = {}
             for key in img.tag:
                 new_key = TAGS[key]
                 metadata[new_key] = img.tag[key]
 
-        # ThermoFischer metadata is parsed differently
-        # It is stored in INI format
-        if "ThermoFischer" not in metadata:
-            raise Exception("ThermoFischer metadata not found")
-
-        metadata["ThermoFischer"] = list(metadata["ThermoFischer"])
-        for i in range(1):#len(metadata["ThermoFischer"])):
-            ini_str = metadata["ThermoFischer"][i]
-            config_metadata = parse_ini(ini_str)
-            metadata["ThermoFischer"][i] = config_metadata
+        # Hitachi metadata is parsed differently
+        # It is stored in INI format in a different file
+        config_fname = self.location.rsplit('.', 1)[0] + ".txt"
+        try:
+            metadata["Hitachi"] = read_ini(config_fname)
+        except:
+            raise Exception(f"Did not find metadata file: {config_fname}")
 
         # From dict to DLite instance
-        inst = self.ThermoFischer(id=id)
-        for key1 in metadata["ThermoFischer"][0]:
-            for key2 in metadata["ThermoFischer"][0][key1]:
+        inst = self.Hitachi(id=id)
+        for key1 in metadata["Hitachi"]:
+            for key2 in metadata["Hitachi"][key1]:
                 key = (key1 + key2).lower()
-                value = metadata["ThermoFischer"][0][key1][key2]
+                value = metadata["Hitachi"][key1][key2]
                 inst.set_property(key, value)
 
         return inst

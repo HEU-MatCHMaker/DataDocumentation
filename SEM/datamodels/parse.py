@@ -6,10 +6,18 @@ from PIL.TiffTags import TAGS
 TAGS[34682] = "ThermoFischer"
 TAGS[34118] = "Zeiss"
 
-def parse_metadata(fname):
+def parse_metadata(fname, hitachi=False):
     """
     Parse metadata from .tif image using the Tiff standard tags
+
+    If the file is Hitachi, set hitachi=True. This cannot be auto-parsed.
     """
+
+    extension = fname.rsplit('.', 1)[1]
+    print(extension)
+    if extension.lower() != "tif":
+        raise Exception("File extension must be .tif")
+
     # Store img metadata with semantic tags, for example,
     # 34682 -> ThermoFischer
     with Image.open(fname) as img:
@@ -45,7 +53,6 @@ def parse_metadata(fname):
             # except for Date/Time, which is stored as key :value
             config_dict = {}
             for line in config:
-                print(line)
                 try:
                     key, value = line.split(" = ")
                 except:
@@ -57,13 +64,16 @@ def parse_metadata(fname):
 
             metadata["Zeiss"][i] = config_dict
 
+    if hitachi:
+        config_fname = fname.rsplit('.', 1)[0] + ".txt"
+        metadata["Hitachi"] = read_ini(config_fname)
+
     return metadata
 
 
 def parse_ini(ini_str : str):
     """
-    Example of how a .INI file might be parsed in Python.
-    Here from .INI to dict, which can be converted to many other formats.
+    Parse a INI file from string to dict.
     """
     config = configparser.ConfigParser()
     config.read_string(ini_str)
@@ -80,8 +90,7 @@ def parse_ini(ini_str : str):
 
 def read_ini(fname : str):
     """
-    Example of how a .INI file might be parsed in Python.
-    Here from .INI to dict, which can be converted to many other formats.
+    Parse a INI file from file to dict.
     """
     config = configparser.ConfigParser()
     config.read(fname)
@@ -96,7 +105,7 @@ def read_ini(fname : str):
     return metadata
 
 
-def read_jeol(fname):
+def parse_jeol(fname):
     """
     JEOL metadata .txt files are stored in encoding ISO-8859 as
         $CM_FORMAT Bitmap
@@ -112,16 +121,15 @@ def read_jeol(fname):
                 key, = line.split(maxsplit=1)
                 metadata[key] = ""
 
-    return metadata
+    return {"JEOL": metadata}
 
 
 
 if __name__ == "__main__":
     metadata = parse_metadata("(ThermoFischer) pos1_01_grid_200x.tif")
-    #metadata = parse_metadata("(Zeiss) 0,5k 2 high.tif")
-    #metadata = parse_metadata("(Hitachi) 15_m001.tif")
-    #metadata["Hitachi"] = read_ini("(Hitachi) 15_m001.txt")
-    #metadata = read_jeol("(JEOL) Exp_Reference 6005 T6 05.txt")
+    metadata = parse_metadata("(Zeiss) 0,5k 2 high.tif")
+    metadata = parse_metadata("(Hitachi) 15_m001.tif", hitachi=True)
+    metadata = parse_jeol("(JEOL) Exp_Reference 6005 T6 05.txt")
     for k in metadata:
         print(k)
         print(metadata[k])

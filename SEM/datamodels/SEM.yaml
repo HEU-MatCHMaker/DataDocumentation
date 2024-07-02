@@ -31,7 +31,7 @@ properties:
     type: float64
     unit: m
     description: "Size of stage (y)"
-  system_system_type: # This is imperfect..
+  instrument_model:
     type: string
     description: "Instrument model, e.g., Apreo"
   acceleration_voltage: 
@@ -54,7 +54,7 @@ properties:
     type: float64
     unit: A
     description: "Current of the electron beam"
-  ebeam_use_case:
+  ebeam_mode:
     type: string
     description: "Mode of electron optics"
   ebeam_stage_x:
@@ -79,9 +79,11 @@ properties:
     description: "Dwell time of each pixel during scan"
   scan_pixel_width:
     type: float64
+    unit: m
     description: "Calibrated width of pixel in real distance"
   scan_pixel_height:
     type: float64
+    unit: m
     description: "Calibrated height of pixel in real distance"
   scan_frame_time:
     type: float64
@@ -89,13 +91,13 @@ properties:
     description: "Scan time for the full frame"
   escan_line_integration:
     type: int
-    description: "Number of times each line was scanned for intensity integration"
+    description: "Number of times each line was scanned for intensity integration. -1 means `not available`."
   image_resolution_x:
     type: int
-    description: "Number of pixels in image width"
+    description: "Number of pixels in image width. -1 means `not available`."
   image_resolution_y:
     type: int
-    description: "Number of pixels in image height"
+    description: "Number of pixels in image height. -1 means `not available`."
   detectors_name:
     type: string
     description: "Detecor's name, e.g., ETD"

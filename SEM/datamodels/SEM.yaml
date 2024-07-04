@@ -34,7 +34,7 @@ properties:
   instrument_model:
     type: string
     description: "Instrument model, e.g., Apreo"
-  acceleration_voltage: 
+  acceleration_voltage:
     type: float64
     unit: V
     description: "Electron acceleration voltage"

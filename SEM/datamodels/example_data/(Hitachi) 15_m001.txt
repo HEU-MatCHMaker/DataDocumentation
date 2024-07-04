@@ -31,8 +31,8 @@ ColorMode=Grayscale
 ColorPalette=
 ScreenMode=Small Screen
 Comment=
-KeyWord1= 
-KeyWord2= 
+KeyWord1=
+KeyWord2=
 Condition=Vacc=10kV   Mag=x200   WD=6.1mm
 DataDisplayCombine=1
 StageType=5

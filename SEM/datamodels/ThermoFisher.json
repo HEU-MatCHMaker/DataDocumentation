@@ -1,6 +1,6 @@
 {
-  "uri": "http://onto-ns.com/meta/matchmaker/0.1/ThermoFischer",
-  "description": "ThermoFischer metadata model, directly based on config in TIF image.",
+  "uri": "http://onto-ns.com/meta/matchmaker/0.1/ThermoFisher",
+  "description": "ThermoFisher metadata model, directly based on config in TIF image.",
   "dimensions": {},
   "properties": {
     "userdate": {

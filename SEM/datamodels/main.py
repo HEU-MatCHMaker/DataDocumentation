@@ -4,9 +4,9 @@ import dlite
 thisdir = Path(__file__).resolve().parent
 dlite.python_storage_plugin_path.append(thisdir  / "plugins")
 
-# ThermoFischer
-fname1 = Path("example_data/(ThermoFischer) pos1_01_grid_200x.tif")
-inst1 = dlite.Instance.from_location("ThermoFischerStorage", fname1)
+# ThermoFisher
+fname1 = Path("example_data/(ThermoFisher) pos1_01_grid_200x.tif")
+inst1 = dlite.Instance.from_location("ThermoFisherStorage", fname1)
 print(inst1)
 
 # Hitachi

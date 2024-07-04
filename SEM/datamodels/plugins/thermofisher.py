@@ -5,15 +5,15 @@ import configparser
 from PIL import Image
 from PIL.TiffTags import TAGS
 
-class ThermoFischerStorage(dlite.DLiteStorageBase):
-    """DLite storage plugin for a ThermoFischer SEM image."""
+class ThermoFisherStorage(dlite.DLiteStorageBase):
+    """DLite storage plugin for a ThermoFisher SEM image."""
 
     with open(Path(__file__).resolve().parent.parent /
-          "ThermoFischer.json", "r") as f:
-        ThermoFischer = dlite.Instance.from_json(f.read())
+          "ThermoFisher.json", "r") as f:
+        ThermoFisher = dlite.Instance.from_json(f.read())
 
     def open(self, location, options=None):
-        """Opens ThermoFischer metadata
+        """Opens ThermoFisher metadata
 
         Arguments:
             location: Path to temperature profile data file.
@@ -37,31 +37,31 @@ class ThermoFischerStorage(dlite.DLiteStorageBase):
             raise Exception("File extension must be .tif")
 
         # Store img metadata with semantic tags, for example,
-        # 34682 -> ThermoFischer, 256 -> ImageWidth, ...
-        TAGS[34682] = "ThermoFischer"
+        # 34682 -> ThermoFisher, 256 -> ImageWidth, ...
+        TAGS[34682] = "ThermoFisher"
         with Image.open(self.location) as img:
             metadata = {}
             for key in img.tag:
                 new_key = TAGS[key]
                 metadata[new_key] = img.tag[key]
 
-        # ThermoFischer metadata is parsed differently
+        # ThermoFisher metadata is parsed differently
         # It is stored in INI format
-        if "ThermoFischer" not in metadata:
-            raise Exception("ThermoFischer metadata not found")
+        if "ThermoFisher" not in metadata:
+            raise Exception("ThermoFisher metadata not found")
 
-        metadata["ThermoFischer"] = list(metadata["ThermoFischer"])
-        for i in range(1):#len(metadata["ThermoFischer"])):
-            ini_str = metadata["ThermoFischer"][i]
-            config_metadata = ThermoFischerStorage.parse_ini(ini_str)
-            metadata["ThermoFischer"][i] = config_metadata
+        metadata["ThermoFisher"] = list(metadata["ThermoFisher"])
+        for i in range(1):#len(metadata["ThermoFisher"])):
+            ini_str = metadata["ThermoFisher"][i]
+            config_metadata = ThermoFisherStorage.parse_ini(ini_str)
+            metadata["ThermoFisher"][i] = config_metadata
 
         # From dict to DLite instance
-        inst = self.ThermoFischer(id=id)
-        for key1 in metadata["ThermoFischer"][0]:
-            for key2 in metadata["ThermoFischer"][0][key1]:
+        inst = self.ThermoFisher(id=id)
+        for key1 in metadata["ThermoFisher"][0]:
+            for key2 in metadata["ThermoFisher"][0][key1]:
                 key = (key1 + key2).lower()
-                value = metadata["ThermoFischer"][0][key1][key2]
+                value = metadata["ThermoFisher"][0][key1][key2]
                 inst.set_property(key, value)
 
         return inst

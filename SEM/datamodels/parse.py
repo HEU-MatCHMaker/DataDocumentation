@@ -3,7 +3,7 @@ from PIL import Image
 from PIL.TiffTags import TAGS
 
 # Add new tags to TIFF
-TAGS[34682] = "ThermoFischer"
+TAGS[34682] = "ThermoFisher"
 TAGS[34118] = "Zeiss"
 
 def parse_metadata(fname, hitachi=False):
@@ -19,21 +19,21 @@ def parse_metadata(fname, hitachi=False):
         raise Exception("File extension must be .tif")
 
     # Store img metadata with semantic tags, for example,
-    # 34682 -> ThermoFischer
+    # 34682 -> ThermoFisher
     with Image.open(fname) as img:
         metadata = {}
         for key in img.tag:
             new_key = TAGS[key]
             metadata[new_key] = img.tag[key]
 
-    # ThermoFischer metadata is parsed differently
+    # ThermoFisher metadata is parsed differently
     # It is stored in INI format
-    if "ThermoFischer" in metadata:
-        metadata["ThermoFischer"] = list(metadata["ThermoFischer"])
-        for i in range(len(metadata["ThermoFischer"])):
-            ini_str = metadata["ThermoFischer"][i]
+    if "ThermoFisher" in metadata:
+        metadata["ThermoFisher"] = list(metadata["ThermoFisher"])
+        for i in range(len(metadata["ThermoFisher"])):
+            ini_str = metadata["ThermoFisher"][i]
             config_metadata = parse_ini(ini_str)
-            metadata["ThermoFischer"][i] = config_metadata
+            metadata["ThermoFisher"][i] = config_metadata
 
 
     # Zeiss metadata is parsed differently
@@ -126,7 +126,7 @@ def parse_jeol(fname):
 
 
 if __name__ == "__main__":
-    metadata = parse_metadata("(ThermoFischer) pos1_01_grid_200x.tif")
+    metadata = parse_metadata("(ThermoFisher) pos1_01_grid_200x.tif")
     metadata = parse_metadata("(Zeiss) 0,5k 2 high.tif")
     metadata = parse_metadata("(Hitachi) 15_m001.tif", hitachi=True)
     metadata = parse_jeol("(JEOL) Exp_Reference 6005 T6 05.txt")

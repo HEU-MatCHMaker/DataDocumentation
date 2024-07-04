@@ -5,9 +5,6 @@ import configparser
 from PIL import Image
 from PIL.TiffTags import TAGS
 
-# Add new tags to TIFF
-TAGS[34682] = "ThermoFischer"
-
 class ThermoFischerStorage(dlite.DLiteStorageBase):
     """DLite storage plugin for a ThermoFischer SEM image."""
 
@@ -40,7 +37,8 @@ class ThermoFischerStorage(dlite.DLiteStorageBase):
             raise Exception("File extension must be .tif")
 
         # Store img metadata with semantic tags, for example,
-        # 34682 -> ThermoFischer
+        # 34682 -> ThermoFischer, 256 -> ImageWidth, ...
+        TAGS[34682] = "ThermoFischer"
         with Image.open(self.location) as img:
             metadata = {}
             for key in img.tag:
@@ -85,5 +83,4 @@ class ThermoFischerStorage(dlite.DLiteStorageBase):
             metadata[section] = dict(items)
 
         return metadata
-
 

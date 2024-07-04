@@ -8,23 +8,6 @@ from PIL.TiffTags import TAGS
 # Add new tags to TIFF
 TAGS[34682] = "ThermoFischer"
 
-def parse_ini(ini_str : str):
-    """
-    Parse a INI file from string to dict.
-    """
-    config = configparser.ConfigParser()
-    config.read_string(ini_str)
-
-    # Convert to dict
-    metadata = dict()
-    sections = config.sections()
-    for section in sections:
-        items = config.items(section)
-        metadata[section] = dict(items)
-
-    return metadata
-
-
 class ThermoFischerStorage(dlite.DLiteStorageBase):
     """DLite storage plugin for a ThermoFischer SEM image."""
 
@@ -72,7 +55,7 @@ class ThermoFischerStorage(dlite.DLiteStorageBase):
         metadata["ThermoFischer"] = list(metadata["ThermoFischer"])
         for i in range(1):#len(metadata["ThermoFischer"])):
             ini_str = metadata["ThermoFischer"][i]
-            config_metadata = parse_ini(ini_str)
+            config_metadata = ThermoFischerStorage.parse_ini(ini_str)
             metadata["ThermoFischer"][i] = config_metadata
 
         # From dict to DLite instance
@@ -84,3 +67,23 @@ class ThermoFischerStorage(dlite.DLiteStorageBase):
                 inst.set_property(key, value)
 
         return inst
+
+
+    @staticmethod
+    def parse_ini(ini_str : str):
+        """
+        Parse a INI file from string to dict.
+        """
+        config = configparser.ConfigParser()
+        config.read_string(ini_str)
+
+        # Convert to dict
+        metadata = dict()
+        sections = config.sections()
+        for section in sections:
+            items = config.items(section)
+            metadata[section] = dict(items)
+
+        return metadata
+
+

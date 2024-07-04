@@ -6,23 +6,6 @@ from PIL import Image
 from PIL.TiffTags import TAGS
 
 
-def read_ini(fname : str):
-    """
-    Parse a INI file from file to dict.
-    """
-    config = configparser.ConfigParser()
-    config.read(fname)
-
-    # Convert to dict
-    metadata = dict()
-    sections = config.sections()
-    for section in sections:
-        items = config.items(section)
-        metadata[section] = dict(items)
-
-    return metadata
-
-
 class HitachiStorage(dlite.DLiteStorageBase):
     """DLite storage plugin for a Hitachi SEM image."""
 
@@ -54,8 +37,7 @@ class HitachiStorage(dlite.DLiteStorageBase):
         if extension.lower() != "tif":
             raise Exception("File extension must be .tif")
 
-        # Store img metadata with semantic tags, for example,
-        # 34682 -> Hitachi
+        # Store img metadata with semantic tags
         with Image.open(self.location) as img:
             metadata = {}
             for key in img.tag:
@@ -66,7 +48,7 @@ class HitachiStorage(dlite.DLiteStorageBase):
         # It is stored in INI format in a different file
         config_fname = self.location.rsplit('.', 1)[0] + ".txt"
         try:
-            metadata["Hitachi"] = read_ini(config_fname)
+            metadata["Hitachi"] = HitachiStorage.read_ini(config_fname)
         except:
             raise Exception(f"Did not find metadata file: {config_fname}")
 
@@ -79,3 +61,21 @@ class HitachiStorage(dlite.DLiteStorageBase):
                 inst.set_property(key, value)
 
         return inst
+
+
+    @staticmethod
+    def read_ini(fname : str):
+        """
+        Parse a INI file from file to dict.
+        """
+        config = configparser.ConfigParser()
+        config.read(fname)
+
+        # Convert to dict
+        metadata = dict()
+        sections = config.sections()
+        for section in sections:
+            items = config.items(section)
+            metadata[section] = dict(items)
+
+        return metadata

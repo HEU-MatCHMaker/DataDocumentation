@@ -1,0 +1,175 @@
+{
+  "uri": "http://onto-ns.com/meta/characterisation/SEM/0.1/Hitachi",
+  "description": "Hitachi metadata model.",
+  "dimensions": {},
+  "properties": {
+    "semimagefileinstructname": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefileserialnumber": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefiledatanumber": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilesamplename": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefileformat": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefileimagename": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefiledirectory": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefiledate": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefiletime": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilemedia": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefiledatasize": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilepixelsize": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilesignalname": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefileacceleratingvoltage": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefiledecelerationvoltage": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilemagnification": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefileworkingdistance": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefileemissioncurrent": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilelensmode": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilephotosize": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilevacuum": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilemicronmarker": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilesubmagnification": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilesubsignalname": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilespecimenbias": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilecondencer1": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilescanspeed": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilecalibrationscanspeed": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilecolormode": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilecolorpalette": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilescreenmode": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilecomment": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilekeyword1": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilekeyword2": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilecondition": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefiledatadisplaycombine": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilestagetype": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilestagepositionx": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilestagepositiony": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilestagepositionr": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilestagepositionz": {
+      "type": "string",
+      "description": ""
+    },
+    "semimagefilestagepositiont": {
+      "type": "string",
+      "description": ""
+    }
+  }
+}

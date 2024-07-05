@@ -1,0 +1,711 @@
+{
+  "uri": "http://onto-ns.com/meta/characterisation/SEM/0.1/ThermoFisher",
+  "description": "ThermoFisher metadata model, directly based on config in TIF image.",
+  "dimensions": {},
+  "properties": {
+    "userdate": {
+      "type": "string",
+      "description": ""
+    },
+    "usertime": {
+      "type": "string",
+      "description": ""
+    },
+    "useruser": {
+      "type": "string",
+      "description": ""
+    },
+    "userusertext": {
+      "type": "string",
+      "description": ""
+    },
+    "userusertextunicode": {
+      "type": "string",
+      "description": ""
+    },
+    "systemtype": {
+      "type": "string",
+      "description": ""
+    },
+    "systemdnumber": {
+      "type": "string",
+      "description": ""
+    },
+    "systemsoftware": {
+      "type": "string",
+      "description": ""
+    },
+    "systembuildnr": {
+      "type": "string",
+      "description": ""
+    },
+    "systemsource": {
+      "type": "string",
+      "description": ""
+    },
+    "systemcolumn": {
+      "type": "string",
+      "description": ""
+    },
+    "systemfinallens": {
+      "type": "string",
+      "description": ""
+    },
+    "systemchamber": {
+      "type": "string",
+      "description": ""
+    },
+    "systemstage": {
+      "type": "string",
+      "description": ""
+    },
+    "systempump": {
+      "type": "string",
+      "description": ""
+    },
+    "systemesem": {
+      "type": "string",
+      "description": ""
+    },
+    "systemaperture": {
+      "type": "string",
+      "description": ""
+    },
+    "systemscan": {
+      "type": "string",
+      "description": ""
+    },
+    "systemacq": {
+      "type": "string",
+      "description": ""
+    },
+    "systemeucwd": {
+      "type": "string",
+      "description": ""
+    },
+    "systemsystemtype": {
+      "type": "string",
+      "description": ""
+    },
+    "systemdisplaywidth": {
+      "type": "string",
+      "description": ""
+    },
+    "systemdisplayheight": {
+      "type": "string",
+      "description": ""
+    },
+    "beamhv": {
+      "type": "string",
+      "description": ""
+    },
+    "beamspot": {
+      "type": "string",
+      "description": ""
+    },
+    "beamstigmatorx": {
+      "type": "string",
+      "description": ""
+    },
+    "beamstigmatory": {
+      "type": "string",
+      "description": ""
+    },
+    "beambeamshiftx": {
+      "type": "string",
+      "description": ""
+    },
+    "beambeamshifty": {
+      "type": "string",
+      "description": ""
+    },
+    "beamscanrotation": {
+      "type": "string",
+      "description": ""
+    },
+    "beamimagemode": {
+      "type": "string",
+      "description": ""
+    },
+    "beamfinestagebias": {
+      "type": "string",
+      "description": ""
+    },
+    "beambeam": {
+      "type": "string",
+      "description": ""
+    },
+    "beamscan": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamsource": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamcolumntype": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamfinallens": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamacq": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamaperture": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamaperturediameter": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamhv": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamhfw": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamvfw": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamwd": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeambeamcurrent": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamtiltcorrectionison": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamdynamicfocusison": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamdynamicwdison": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamscanrotation": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamlensmode": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamlensmodea": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamatubevoltage": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamusecase": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamsemopticalmode": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamimagemode": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamsourcetiltx": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamsourcetilty": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamstagex": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamstagey": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamstagez": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamstager": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamstageta": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamstagetb": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamstigmatorx": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamstigmatory": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeambeamshiftx": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeambeamshifty": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeameucwd": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamemissioncurrent": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamtiltcorrectionangle": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeampretilt": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamwehneltbias": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeambeammode": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeammagnificationcorrection": {
+      "type": "string",
+      "description": ""
+    },
+    "gisnumber": {
+      "type": "string",
+      "description": ""
+    },
+    "scaninternalscan": {
+      "type": "string",
+      "description": ""
+    },
+    "scandwelltime": {
+      "type": "string",
+      "description": ""
+    },
+    "scanpixelwidth": {
+      "type": "string",
+      "description": ""
+    },
+    "scanpixelheight": {
+      "type": "string",
+      "description": ""
+    },
+    "scanhorfieldsize": {
+      "type": "string",
+      "description": ""
+    },
+    "scanverfieldsize": {
+      "type": "string",
+      "description": ""
+    },
+    "scanaverage": {
+      "type": "string",
+      "description": ""
+    },
+    "scanintegrate": {
+      "type": "string",
+      "description": ""
+    },
+    "scanframetime": {
+      "type": "string",
+      "description": ""
+    },
+    "escanscan": {
+      "type": "string",
+      "description": ""
+    },
+    "escaninternalscan": {
+      "type": "string",
+      "description": ""
+    },
+    "escandwell": {
+      "type": "string",
+      "description": ""
+    },
+    "escanpixelwidth": {
+      "type": "string",
+      "description": ""
+    },
+    "escanpixelheight": {
+      "type": "string",
+      "description": ""
+    },
+    "escanhorfieldsize": {
+      "type": "string",
+      "description": ""
+    },
+    "escanverfieldsize": {
+      "type": "string",
+      "description": ""
+    },
+    "escanframetime": {
+      "type": "string",
+      "description": ""
+    },
+    "escanlinetime": {
+      "type": "string",
+      "description": ""
+    },
+    "escanmainslock": {
+      "type": "string",
+      "description": ""
+    },
+    "escanlineintegration": {
+      "type": "string",
+      "description": ""
+    },
+    "escanscaninterlacing": {
+      "type": "string",
+      "description": ""
+    },
+    "stagestagex": {
+      "type": "string",
+      "description": ""
+    },
+    "stagestagey": {
+      "type": "string",
+      "description": ""
+    },
+    "stagestagez": {
+      "type": "string",
+      "description": ""
+    },
+    "stagestager": {
+      "type": "string",
+      "description": ""
+    },
+    "stagestaget": {
+      "type": "string",
+      "description": ""
+    },
+    "stagestagetb": {
+      "type": "string",
+      "description": ""
+    },
+    "stagespectilt": {
+      "type": "string",
+      "description": ""
+    },
+    "stageworkingdistance": {
+      "type": "string",
+      "description": ""
+    },
+    "stageactivestage": {
+      "type": "string",
+      "description": ""
+    },
+    "imagedigitalcontrast": {
+      "type": "string",
+      "description": ""
+    },
+    "imagedigitalbrightness": {
+      "type": "string",
+      "description": ""
+    },
+    "imagedigitalgamma": {
+      "type": "string",
+      "description": ""
+    },
+    "imageaverage": {
+      "type": "string",
+      "description": ""
+    },
+    "imageintegrate": {
+      "type": "string",
+      "description": ""
+    },
+    "imageresolutionx": {
+      "type": "string",
+      "description": ""
+    },
+    "imageresolutiony": {
+      "type": "string",
+      "description": ""
+    },
+    "imagedriftcorrected": {
+      "type": "string",
+      "description": ""
+    },
+    "imagezoomfactor": {
+      "type": "string",
+      "description": ""
+    },
+    "imagezoompanx": {
+      "type": "string",
+      "description": ""
+    },
+    "imagezoompany": {
+      "type": "string",
+      "description": ""
+    },
+    "imagemagcanvasrealwidth": {
+      "type": "string",
+      "description": ""
+    },
+    "imagemagnificationmode": {
+      "type": "string",
+      "description": ""
+    },
+    "imagescreenmagcanvasrealwidth": {
+      "type": "string",
+      "description": ""
+    },
+    "imagescreenmagnificationmode": {
+      "type": "string",
+      "description": ""
+    },
+    "imagepostprocessing": {
+      "type": "string",
+      "description": ""
+    },
+    "imagetransformation": {
+      "type": "string",
+      "description": ""
+    },
+    "vacuumchpressure": {
+      "type": "string",
+      "description": ""
+    },
+    "vacuumgas": {
+      "type": "string",
+      "description": ""
+    },
+    "vacuumusermode": {
+      "type": "string",
+      "description": ""
+    },
+    "vacuumhumidity": {
+      "type": "string",
+      "description": ""
+    },
+    "specimentemperature": {
+      "type": "string",
+      "description": ""
+    },
+    "specimenspecimencurrent": {
+      "type": "string",
+      "description": ""
+    },
+    "detectorsnumber": {
+      "type": "string",
+      "description": ""
+    },
+    "detectorsname": {
+      "type": "string",
+      "description": ""
+    },
+    "detectorsmode": {
+      "type": "string",
+      "description": ""
+    },
+    "etdcontrast": {
+      "type": "string",
+      "description": ""
+    },
+    "etdbrightness": {
+      "type": "string",
+      "description": ""
+    },
+    "etdmix": {
+      "type": "string",
+      "description": ""
+    },
+    "etdsignal": {
+      "type": "string",
+      "description": ""
+    },
+    "etdgrid": {
+      "type": "string",
+      "description": ""
+    },
+    "etdcontrastdb": {
+      "type": "string",
+      "description": ""
+    },
+    "etdbrightnessdb": {
+      "type": "string",
+      "description": ""
+    },
+    "etdsetting": {
+      "type": "string",
+      "description": ""
+    },
+    "etdminimumdwelltime": {
+      "type": "string",
+      "description": ""
+    },
+    "accessoriesnumber": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamdecelerationmodeon": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamdecelerationlandingenergy": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamdecelerationimmersionratio": {
+      "type": "string",
+      "description": ""
+    },
+    "ebeamdecelerationstagebias": {
+      "type": "string",
+      "description": ""
+    },
+    "compoundlensfilterison": {
+      "type": "string",
+      "description": ""
+    },
+    "compoundlensfilterthresholdenergy": {
+      "type": "string",
+      "description": ""
+    },
+    "privatefeibitshift": {
+      "type": "string",
+      "description": ""
+    },
+    "privatefeidatabarselected": {
+      "type": "string",
+      "description": ""
+    },
+    "privatefeidatabaravailable": {
+      "type": "string",
+      "description": ""
+    },
+    "privatefeitimeofcreation": {
+      "type": "string",
+      "description": ""
+    },
+    "privatefeidatabarheight": {
+      "type": "string",
+      "description": ""
+    },
+    "hiresilluminationbrightfieldison": {
+      "type": "string",
+      "description": ""
+    },
+    "hiresilluminationbrightfieldvalue": {
+      "type": "string",
+      "description": ""
+    },
+    "hiresilluminationdarkfieldison": {
+      "type": "string",
+      "description": ""
+    },
+    "hiresilluminationdarkfieldvalue": {
+      "type": "string",
+      "description": ""
+    },
+    "easyliftrotation": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagememsheatingcurrent": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagememsheatingvoltage": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagememstargettemperature": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagememsactualtemperature": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagememsheatingpower": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagememssamplebias": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagememssampleresistance": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagetargettemperature": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstageactualtemperature": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagesamplebias": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstageshieldbias": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagehvhstargettemperature": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagehvhsactualtemperature": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagehvhssamplebias": {
+      "type": "string",
+      "description": ""
+    },
+    "hotstagehvhsshieldbias": {
+      "type": "string",
+      "description": ""
+    },
+    "coldstagetargettemperature": {
+      "type": "string",
+      "description": ""
+    },
+    "coldstageactualtemperature": {
+      "type": "string",
+      "description": ""
+    },
+    "coldstagehumidity": {
+      "type": "string",
+      "description": ""
+    },
+    "coldstagesamplebias": {
+      "type": "string",
+      "description": ""
+    }
+  }
+}

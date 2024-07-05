@@ -1,0 +1,105 @@
+uri: http://onto-ns.com/meta/characterisation/SEM/0.1/SEM
+description: SEM metadata model.
+properties:
+  file_location:
+    type: string
+    description: "Where the raw image is stored."
+  file_type:
+    type: string
+    description: "Type of image, e.g., .tif, .jpg"
+  date:
+    type: string
+    description: "Date of acquisition, yyyy-mm-dd"
+  time:
+    type: string
+    description: "Time of acquisition, hh:mm:ss"
+  system_type:
+    type: string
+    description: "Type of instrument, e.g., SEM"
+  system_software:
+    type: string
+    description: "Version of system software"
+  system_source:
+    type: string
+    description: "Electron source, e.g., FEG."
+  system_stage_x:
+    type: float64
+    unit: m
+    description: "Size of stage (x)"
+  system_stage_y:
+    type: float64
+    unit: m
+    description: "Size of stage (y)"
+  instrument_model:
+    type: string
+    description: "Instrument model, e.g., Apreo"
+  acceleration_voltage:
+    type: float64
+    unit: V
+    description: "Electron acceleration voltage"
+  aperture_diameter_objective:
+    type: float64
+    unit: m
+    description: "Diameter of objective aperture"
+  horizontal_field_width:
+    type: float64
+    unit: m
+    description: "Width of the image in real space"
+  working_distance:
+    type: float64
+    unit: m
+    description: "Distance between the sample and the electron polepiece"
+  beam_current:
+    type: float64
+    unit: A
+    description: "Current of the electron beam"
+  ebeam_mode:
+    type: string
+    description: "Mode of electron optics"
+  ebeam_stage_x:
+    type: float64
+    unit: m
+    description: "X position relative to stage centre"
+  ebeam_stage_y:
+    type: float64
+    unit: m
+    description: "Y position relative to stage centre"
+  ebeam_stage_z:
+    type: float64
+    unit: m
+    description: "Z position of sample relative to electron polepiece"
+  ebeam_stage_angle:
+    type: float64
+    unit: rad
+    description: "Rotation of sample stage"
+  scan_dwelltime:
+    type: float64
+    unit: s
+    description: "Dwell time of each pixel during scan"
+  scan_pixel_width:
+    type: float64
+    unit: m
+    description: "Calibrated width of pixel in real distance"
+  scan_pixel_height:
+    type: float64
+    unit: m
+    description: "Calibrated height of pixel in real distance"
+  scan_frame_time:
+    type: float64
+    unit: s
+    description: "Scan time for the full frame"
+  escan_line_integration:
+    type: int
+    description: "Number of times each line was scanned for intensity integration. -1 means `not available`."
+  image_resolution_x:
+    type: int
+    description: "Number of pixels in image width. -1 means `not available`."
+  image_resolution_y:
+    type: int
+    description: "Number of pixels in image height. -1 means `not available`."
+  detectors_name:
+    type: string
+    description: "Detecor's name, e.g., ETD"
+  detectors_mode:
+    type: string
+    description: "Detecor's mode, e.g., SE"

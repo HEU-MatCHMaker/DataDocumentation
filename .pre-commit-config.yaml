@@ -46,4 +46,4 @@ repos:
     hooks:
     - id: validate-entities
       additional_dependencies: [".[cli]"]
-      files: ^UC1/entities/.*$
+      files: ^Concrete/datamodels/.*$

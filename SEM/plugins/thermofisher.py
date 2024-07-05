@@ -83,4 +83,3 @@ class ThermoFisherStorage(dlite.DLiteStorageBase):
             metadata[section] = dict(items)
 
         return metadata
-

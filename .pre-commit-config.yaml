@@ -5,7 +5,7 @@ ci:
 
       For more information, see https://pre-commit.ci
   autofix_prs: true
-  autoupdate_branch: 'main'
+  autoupdate_branch: 'master'
   autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
   autoupdate_schedule: 'weekly'
   skip: ['validate-entities']
@@ -46,4 +46,4 @@ repos:
     hooks:
     - id: validate-entities
       additional_dependencies: [".[cli]"]
-      files: ^UC1/entities/.*$
+      files: ^Concrete/datamodels/.*$

@@ -1,6 +1,5 @@
-uri: http://onto-ns.com/meta/matchmaker/0.1/SEM_metadata
+uri: http://onto-ns.com/meta/characterisation/SEM/0.1/SEM
 description: SEM metadata model.
-dimensions:
 properties:
   file_location:
     type: string

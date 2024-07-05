@@ -1,4 +1,4 @@
-uri: http://onto-ns.com/meta/cement/0.1.1/Volumetric_dosages
+uri: http://onto-ns.com/meta/cement/0.1.1/VolumetricDosages
 description: The volumetric dosages of the components of the concrete computed from the initial water-to-cement mass ratio and the degree of hydration of the cement. The model also considers the elastic and strength properties of the cement constituents, the characteristic shape and size of the cement constituents, and the mode of interaction at the scale of observation of the cement constituents. The model is based on the work of Bazant and Kaplan (1996).
 dimensions:
   wc_range: The calculation parameter range for the initial water-to-cement mass ratio.

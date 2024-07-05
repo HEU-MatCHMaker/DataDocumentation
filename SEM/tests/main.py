@@ -1,16 +1,17 @@
 from pathlib import Path
 import dlite
 
-thisdir = Path(__file__).resolve().parent
-dlite.python_storage_plugin_path.append(thisdir  / "plugins")
+rootdir = Path(__file__).resolve().parent.parent
+print(rootdir)
+dlite.python_storage_plugin_path.append(rootdir  / "plugins")
 
 # ThermoFisher
-fname1 = Path("example_data/(ThermoFisher) pos1_01_grid_200x.tif")
+fname1 = rootdir / "example_data" / "(ThermoFisher) pos1_01_grid_200x.tif"
 inst1 = dlite.Instance.from_location("ThermoFisherStorage", fname1)
 print(inst1)
 
 # Hitachi
-fname2 = Path("example_data/(Hitachi) 15_m001.tif")
+fname2 = rootdir / "example_data" / "(Hitachi) 15_m001.tif"
 inst2 = dlite.Instance.from_location("HitachiStorage", fname2)
 print(inst2)
 

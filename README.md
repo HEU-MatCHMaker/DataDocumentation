@@ -5,6 +5,7 @@ It holds the "source of truth" for these entities, and as such, if updated, the 
 
 The repository is structured according to domain, concrete, SOFC, PEMFC, SEM, TEM, etc.
 For each domain a standard subfolder structure is used, like
+
 - `/datamodels/`: Data models in YAML or JSON format.
 - `/plugins/`: DLite storage plugins for the data models.
 - `/example_data/`: Example datasets and instances.

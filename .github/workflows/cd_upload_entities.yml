@@ -2,7 +2,7 @@ name: CD - Upload Entities
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
 
 jobs:
@@ -58,7 +58,7 @@ jobs:
         run: cat entities.txt | entities-service validate --strict --format=yaml --format=json -
 
       - name: Upload Entities
-        if: env.RELEVANT_ENTITIES == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: env.RELEVANT_ENTITIES == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: cat entities.txt | entities-service upload --auto-confirm --strict --format=yaml --format=json -
         env:
           ENTITIES_SERVICE_ACCESS_TOKEN: ${{ secrets.ENTITIES_SERVICE_ACCESS_TOKEN }}

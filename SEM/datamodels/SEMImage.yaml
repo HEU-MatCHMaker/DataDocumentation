@@ -1,0 +1,30 @@
+uri: http://onto-ns.com/meta/matchmaker/0.1/SEMImage
+description: |
+  SEM image with elemental mappings. Represented as a stack of elemental mapping
+  followed by the image formed by the back-scattered electrons (BSE).
+  Set `nelements=0` if you only have the back-scattered image.
+dimensions:
+  nelements: Number of elements for elemental mapping.
+  height: Number of pixels along the image height.
+  width: Number of pixels along the image width.
+properties:
+  data:
+    type: float32
+    shape: [nelements+1, height, width]
+    description: "Image data - a stack of images for each channel"
+  elements:
+    type: string
+    shape: [nelements]
+    description: "The chemical symbols of the element maps."
+  pixelwidth:
+    type: float64
+    unit: m
+    description: "Width of each pixel."
+  pixelheight:
+    type: float64
+    unit: m
+    description: "Height of each pixel."
+  metadata:
+    type: ref
+    ref: http://onto-ns.com/meta/characterisation/SEM/0.1/SEM
+    description: "Reference to data model for SEM metadata."

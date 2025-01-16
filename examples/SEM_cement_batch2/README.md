@@ -1,12 +1,12 @@
 Example of documenting a series of SEM datasets
 ===============================================
-This example shows how to populate a knowledge base with a series of SEM datasets and related resources.
 
+This example shows how to populate a knowledge base with a series of SEM datasets and related resources.
 
 Setup
 -----
-This demo assumes that you have git and Python installed.
 
+This demo assumes that you have git and Python installed.
 
 Clone the MatCHMaker DataDocumentation GitHub repository.
 
@@ -43,18 +43,17 @@ Install required Python packages
     pip install -U pip
     pip install -r requirements.txt
 
-
 Document the SEM datasets and related resources
 -----------------------------------------------
+
 The following types of resources will be documented:
+
 - SEM datasets consisting of two files; a .tiff (image data) and a .txt (instrument metadata).
 - A dataset, that is a series of the above SEM datasets.
 - Investigated samples.
 - OTEIO parsers and generators.
 
 The [input/] folder contain CSV files with documentation for each resource type.
-
-
 
 [generate an SSH key]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 [add an SSH key]:  https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account

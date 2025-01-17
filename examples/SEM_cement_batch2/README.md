@@ -1,10 +1,11 @@
 Example of documenting a series of SEM datasets
 ===============================================
-This example shows how to populate a knowledge base with a series of SEM datasets and related resources.
 
+This example shows how to populate a knowledge base with a series of SEM datasets and related resources.
 
 Setup
 -----
+
 This demo assumes that you have git and Python installed.
 
 Clone the MatCHMaker DataDocumentation GitHub repository.
@@ -42,9 +43,9 @@ Install required Python packages
     pip install -U pip
     pip install -r requirements.txt
 
-
 Document the SEM datasets and related resources
 -----------------------------------------------
+
 The following types of resources will be documented:
 
 - SEM datasets consisting of two files; a .tiff (image data) and a .txt (instrument metadata).
@@ -54,8 +55,8 @@ The following types of resources will be documented:
 
 The [input/] folder contain CSV files with documentation for each resource type.
 
-
 ### Working against an in-memory knowledge base
+
 For now we will work against an in-memory knowledge base stored in a local file named `kb.ttl`.
 
 Document all the different types of resources in the [input/] folder:
@@ -89,14 +90,9 @@ Access a documented dataset (does not handle sftp credentials yet...):
 
     datadoc --parse=kb.ttl fetch semdata:77600-23-001_15kV_400x_m001 --output=77600-23-001_15kV_400x_m001.zip
 
-
-
-
 ### Working against GraphDB hosted by SIMAVI
 
 Repeat the above example, but work against the SIMAVI GraphDB instance.
-
-
 
 [generate an SSH key]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 [add an SSH key]:  https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account

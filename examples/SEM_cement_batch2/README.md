@@ -59,12 +59,12 @@ The CSV files has a header row with keywords. The available keywords and their m
 
 In addition this example uses a few custom keywords defined in the [context.json] file.
 Their have the following meaning:
+
 - **fromSample**: Relates an experimental dataset to the sample (material object) its was acquired from.
 - **magnification**: The magnification of the microscope (for imaging).
 - **highVoltage_kV**: The acceleration voltage of the microscope in kV.
 - **positionNo**: Index of the image in a map composed of several images. Should be further defined...
 - **hasComposition**: Relates a sample to a dataset describing its composition.
-
 
 ### Working against an in-memory knowledge base
 

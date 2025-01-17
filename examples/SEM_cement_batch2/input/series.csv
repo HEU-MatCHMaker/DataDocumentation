@@ -1,4 +1,4 @@
-@id,@type,theme,title,description,publisher.name,inSeries
+@id,@type,theme,title,description,publisher,inSeries
 semdata:SEM_cement_batch2_77600-23-001,sem:SEMImageSeries,SEM,Series of SEM image of cement sample 77600,"Back-scattered SEM image of cement sample 77600, polished with 1 µm diamond compound.",Sigurd Wenner,semdata:SEM_cement_batch2
 semdata:SEM_cement_batch2_77601-23-001,sem:SEMImageSeries,SEM,Series of SEM image of cement sample 77600,"Back-scattered SEM image of cement sample 77600, polished with 1 µm diamond compound.",Sigurd Wenner,semdata:SEM_cement_batch2
 semdata:SEM_cement_batch2_77602-23-001,sem:SEMImageSeries,SEM,Series of SEM image of cement sample 77600,"Back-scattered SEM image of cement sample 77600, polished with 1 µm diamond compound.",Sigurd Wenner,semdata:SEM_cement_batch2

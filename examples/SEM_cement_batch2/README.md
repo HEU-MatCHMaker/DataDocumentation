@@ -55,6 +55,17 @@ The following types of resources will be documented:
 
 The [input/] folder contain CSV files with documentation for each resource type.
 
+The CSV files has a header row with keywords. The available keywords and their meaning is described in the list of [pre-defined keywords] in the [tripper documentation].
+
+In addition this example uses a few custom keywords defined in the [context.json] file.
+Their have the following meaning:
+- **fromSample**: Relates an experimental dataset to the sample (material object) its was acquired from.
+- **magnification**: The magnification of the microscope (for imaging).
+- **highVoltage_kV**: The acceleration voltage of the microscope in kV.
+- **positionNo**: Index of the image in a map composed of several images. Should be further defined...
+- **hasComposition**: Relates a sample to a dataset describing its composition.
+
+
 ### Working against an in-memory knowledge base
 
 For now we will work against an in-memory knowledge base stored in a local file named `kb.ttl`.
@@ -97,3 +108,6 @@ Repeat the above example, but work against the SIMAVI GraphDB instance.
 [generate an SSH key]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 [add an SSH key]:  https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
 [input/]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/sem-example/examples/SEM_cement_batch2/input/
+[pre-defined keywords]: https://emmc-asbl.github.io/tripper/latest/datadoc/keywords/
+[tripper documentation]: https://emmc-asbl.github.io/tripper/latest/
+[context.json]: input/context.json

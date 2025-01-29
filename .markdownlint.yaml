@@ -11,7 +11,7 @@ MD013:
   # Number of characters for code blocks (match that of black's default)
   code_block_line_length: 88
 # MD003 header styles
-# According to the documentation this is triggered on a document per 
+# According to the documentation this is triggered on a document per
 # document basis. However, it does not seem to work that way
 # see https://github.com/DavidAnson/markdownlint-cli2/issues/492
 # Set to false for now

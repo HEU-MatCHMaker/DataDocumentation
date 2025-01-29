@@ -126,10 +126,10 @@ def parse_jeol(fname):
 
 
 if __name__ == "__main__":
-    metadata = parse_metadata("../example_data/(ThermoFisher) pos1_01_grid_200x.tif")
-    metadata = parse_metadata("../example_data/(Zeiss) 0,5k 2 high.tif")
-    metadata = parse_metadata("../example_data/(Hitachi) 15_m001.tif", hitachi=True)
-    metadata = parse_jeol("../example_data/(JEOL) Exp_Reference 6005 T6 05.txt")
+    metadata = parse_metadata("../example_data/ThermoFisher_pos1_01_grid_200x.tif")
+    metadata = parse_metadata("../example_data/Zeiss_0.5k_2_high.tif")
+    metadata = parse_metadata("../example_data/Hitachi_15_m001.tif", hitachi=True)
+    metadata = parse_jeol("../example_data/JEOL_Exp_Reference 6005 T6 05.txt")
     for k in metadata:
         print(k)
         print(metadata[k])

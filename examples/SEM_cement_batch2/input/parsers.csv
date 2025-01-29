@@ -1,0 +1,3 @@
+@id,@type,parserType,configuration.driver
+parser:sem_hitachi,oteio:Parser,application/vnd.dlite-parse,hitachi
+gen:sem_hitachi,oteio:Generator,application/vnd.dlite-generate,hitachi

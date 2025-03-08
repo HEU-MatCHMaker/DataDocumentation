@@ -14,7 +14,7 @@ rootdir = Path(__file__).resolve().parent.parent
 datamodeldir = rootdir / "Concrete" / "datamodels"
 plugindir = rootdir / "Concrete" / "plugins"
 datadir = rootdir / "Concrete" / "example_data"
-outdir = rootdir / "Concrete" / "output"
+outdir = rootdir / "tests" / "output"
 
 dlite.python_storage_plugin_path.append(plugindir)
 

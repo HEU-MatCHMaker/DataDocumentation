@@ -7,12 +7,12 @@
 :parameter_adjustment,chameo:MeasurementSystemAdjustment,Measurement parameter adjustment,Measurement parameter adjustment,SEM,:sem_image_acquisition,:eds_mapping,,,:sem_parameters,:sem_characterisation
 :parameter_selection,chameo:MeasurementSystemAdjustment,SEM parameter selection,"Select high tension, detectors, apertures, etc",SEM,:beam_alignment,,,,,:parameter_adjustment
 :beam_alignment,chameo:MeasurementSystemAdjustment,Beam alignment,Align the electron beam.,SEM,,,,,,:parameter_adjustment
-:sem_image_acqusition,chameo:CharacterisationMeasurementProcess,SEM image acquisition,Acquire back-scattered electron (BSE) images,SEM,:bse_processing,,:sample,:sem_parameters,,:sem_characterisation
-:eds_mapping,chameo:CharacterisationMeasurementProcess,EDS mapping,Acquire electron dispersive spectroscopy (EDS) maps,SEM,:eds_processing,,:sample,:sem_parameters,,:sem_characterisation
-:bse_processing,chameo:DataProcessing,Processing of BSE image,Processing of back-scattered image,SEM,:result_analysis,,:bse_image,,:phase_fractions,:sem_characterisation
-:bse_preprocessing,chameo:DataPreparation,BSE pre-processing,Filter the BSE image and adjust contrast.,SEM,:bse_postprocessing,,:bse_image,,,:bse_processing
-:bse_postprocessing,chameo:DataPostProcessing,BSE clustering,Cluster the combined BSE image and EDS map,SEM,,,,:chem_comp_map,,:bse_processing
+:sem_image_acqusition,chameo:CharacterisationMeasurementProcess,SEM image acquisition,Acquire back-scattered electron (BSE) images,SEM,:bse_processing,,:sample,:sem_parameters,:bse_image,:sem_characterisation
+:eds_mapping,chameo:CharacterisationMeasurementProcess,EDS mapping,Acquire electron dispersive spectroscopy (EDS) maps,SEM,:eds_processing,,:sample,:sem_parameters,:eds_map,:sem_characterisation
+:bse_processing,chameo:DataProcessing,Processing of BSE image,Processing of back-scattered image,SEM,:result_analysis,,:bse_image,,:clustered_image,:sem_characterisation
+:bse_preprocessing,chameo:DataPreparation,BSE pre-processing,Filter the BSE image and adjust contrast.,SEM,:bse_postprocessing,,,,,:bse_processing
+:bse_postprocessing,chameo:DataPostProcessing,BSE clustering,Cluster the combined BSE image and EDS map,SEM,,,,,,:bse_processing
 :eds_processing,chameo:DataProcessing,Processing of EDS map,Processing of EDS map,SEM,:bse_postprocessing,,:eds_map,,:chem_comp_map,:sem_characterisation
 :eds_preprocessing,chameo:DataPreparation,EDS binning,Pre-process EDS map by binning.,SEM,:eds_postprocessing,,,,,:eds_processing
-:eds_postprocessing,chameo:DataPostProcessing,EDS quantification,Use EDS map to quantify chemical composition.,SEM,,,,,:chem_comp_map,:eds_processing
-:result_analysis,chameo:DataAnalysis,Result analysis,Extraction of phase fractions,SEM,,,,,:phase_fractions,:sem_characterisation
+:eds_postprocessing,chameo:DataPostProcessing,EDS quantification,Use EDS map to quantify chemical composition.,SEM,,,,,,:eds_processing
+:result_analysis,chameo:DataAnalysis,Result analysis,Extraction of phase fractions,SEM,,,:clustered_image,:chem_comp_map,:phase_fractions,:sem_characterisation

@@ -1,4 +1,5 @@
-@id,@type,title,description,theme
-:material,emmo:Material,Cement,Cement casting.,SEM
-:unpolished_sample,@chameo:Sample,Unpolished sample,Unpolished SEM sample from cured cement paste.,SEM
-:sample,@chameo:Sample,Sample,SEM sample from cured cement paste.,SEM
+@id,@type,title,description,theme,contactPoint.hasName
+:material,emmo:Material,Cement,Cement casting.,SEM,Alexandre Ouzia
+:unpolished_sample,@chameo:Sample,Unpolished sample,Unpolished SEM sample from cured cement paste.,SEM,Alexandre Ouzia
+:uncoated_sample,@chameo:Sample,Uncoated sample,Uncoated SEM sample from cured cement paste.,SEM,Sigurd Wenner
+:sample,@chameo:Sample,Sample,SEM sample from cured cement paste.,SEM,Sigurd Wenner

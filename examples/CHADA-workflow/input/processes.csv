@@ -1,16 +1,16 @@
-@id,@type,title,description,theme,precedes,precedes,hasInput,hasOutput,isTemporalPartOf
-:sem_characterisation,chameo:CharacterisationProcedure,SEM characterisation,SEM characterisation workflow of cement samples,SEM,,,,,
-:sample_extraction,chameo:SampleExtraction,Sawing,Extraction of SEM sample from the casted sement by sawing,SEM,:sample_preparation1,,,,:sem_characterisation
-:sample_preparation1,chameo:SamplePreparation,Polishing,Polishing the extracted SEM sampe,SEM,:sample_inspection,,,,:sem_characterisation
-:sample_inspection,chameo:SampleInspection,Optical microscopy,Sample inspection by optical microscopy,SEM,:sample_preparation2,,,,:sem_characterisation
-:sample_preparation2,chameo:SamplePreparation,Coating,Coating the SEM sample with carbon to make it electrical conducting,SEM,:measurement_process,,,,:sem_characterisation
-:sem_alignment,chameo:MeasurementSystemAdjustment,SEM alignment,Measurement parameter adjustment,SEM,:measurement_process,,,,:sem_characterisation
-:parameter_setup,chameo:MeasurementSystemAdjustment,SEM parameter setup,"Select high tension, detectors, apartures, etc",SEM,:beam_alignment,,,,:sem_alignment
-:beam_alignment,chameo:MeasurementSystemAdjustment,Beam alignment,Align the electron beam.,SEM,,,,,:sem_alignment
-:measurement_process,chameo:CharacterisationMeasurementProcess,SEM Measurement process,Acquire BSE images and EDS maps,SEM,:bse_processing,:eds_processing,,,:sem_characterisation
-:bse_processing,chameo:DataProcessing,Processing of BSE image,Processing of back-scattered image,SEM,,,,,:sem_characterisation
-:bse_preprocessing,chameo:DataPreparation,BSE pre-processing,Filter the BSE image and adjust contrast.,SEM,:bse_postprocessing,,,,:bse_processing
-:bse_postprocessing,chameo:DataPostProcessing,BSE clustering,Cluster the combined BSE image and EDS map,SEM,,,,,:bse_processing
-:eds_processing,chameo:DataProcessing,Processing of EDS map,Processing of EDS map,SEM,,,,,:sem_characterisation
-:eds_preprocessing,chameo:DataPreparation,EDS binning,Pre-process EDS map by binning.,SEM,:eds_postprocessing,,,,:eds_processing
-:eds_postprocessing,chameo:DataPostProcessing,EDS quantification,Use EDS map to quantify chemical composition.,SEM,,,,,:eds_processing
+@id,@type,title,description,theme,precedes,precedes,hasInput,hasInput,hasOutput,isTemporalPartOf
+:sem_characterisation,chameo:CharacterisationProcedure,SEM characterisation,SEM characterisation workflow of cement samples,SEM,,,,,,
+:sample_extraction,chameo:SampleExtraction,Sawing,Extraction of SEM sample from the casted sement by sawing,SEM,:sample_preparation1,,,,,:sem_characterisation
+:sample_preparation1,chameo:SamplePreparation,Polishing,Polishing the extracted SEM sampe,SEM,:sample_inspection,,,,,:sem_characterisation
+:sample_inspection,chameo:SampleInspection,Optical microscopy,Sample inspection by optical microscopy,SEM,:sample_preparation2,,,,,:sem_characterisation
+:sample_preparation2,chameo:SamplePreparation,Coating,Coating the SEM sample with carbon to make it electrical conducting,SEM,:measurement_process,,,,,:sem_characterisation
+:sem_alignment,chameo:MeasurementSystemAdjustment,SEM alignment,Measurement parameter adjustment,SEM,:measurement_process,,,,,:sem_characterisation
+:parameter_setup,chameo:MeasurementSystemAdjustment,SEM parameter setup,"Select high tension, detectors, apartures, etc",SEM,:beam_alignment,,,,,:sem_alignment
+:beam_alignment,chameo:MeasurementSystemAdjustment,Beam alignment,Align the electron beam.,SEM,,,,,,:sem_alignment
+:measurement_process,chameo:CharacterisationMeasurementProcess,SEM Measurement process,Acquire BSE images and EDS maps,SEM,:bse_processing,:eds_processing,,,,:sem_characterisation
+:bse_processing,chameo:DataProcessing,Processing of BSE image,Processing of back-scattered image,SEM,,,:bse_image,,:phase_fractions,:sem_characterisation
+:bse_preprocessing,chameo:DataPreparation,BSE pre-processing,Filter the BSE image and adjust contrast.,SEM,:bse_postprocessing,,,,,:bse_processing
+:bse_postprocessing,chameo:DataPostProcessing,BSE clustering,Cluster the combined BSE image and EDS map,SEM,,,,:chem_comp_map,,:bse_processing
+:eds_processing,chameo:DataProcessing,Processing of EDS map,Processing of EDS map,SEM,,,:eds_map,,,:sem_characterisation
+:eds_preprocessing,chameo:DataPreparation,EDS binning,Pre-process EDS map by binning.,SEM,:eds_postprocessing,,,,:chem_comp_map,:eds_processing
+:eds_postprocessing,chameo:DataPostProcessing,EDS quantification,Use EDS map to quantify chemical composition.,SEM,,,,,,:eds_processing

@@ -3,8 +3,6 @@ Documenting a CHADA workflow
 
 ![CHADA workflow](figs/SEM-CHADA-bpmn_diagram.png)
 
-
-
 Populating graphdatabase
 ========================
 
@@ -22,7 +20,6 @@ Make sure that you are in the folder where you want your environment.
     ".\${envname}\Scripts\activate.bat" # Windows PowerShell
     pip install ipython # If you want to use ipython, however choice of python is up to you
 
-
 Install tripper
 
     pip install -U pip
@@ -32,22 +29,17 @@ For handling of username and password
     pip install keyring
     pip install keyrings.alt  # This is the simplest cross-platform keyring, more secure version exist.
 
-
 NB! In Windows Powershell you will get an error as the folder with the scripts is not in the PATH.
 you can fix this in the current session as shown below. Note that the first ';' is crucial
 
     $env:Path += ';C:\path\displayed\in\the\warning'
 
-
 The development version of tripper from the `master` branch together with extra dependencies for data documentation is now installed.
 
 Clone the DataDocumentation folder to where you want.
 
-
     git clone git@github.com:HEU-MatCHMaker/DataDocumentation.git
     cd DataDocumentation/examples/CHADA-workflow
-
-
 
 Prepare your local triplestore
 ------------------------------
@@ -74,14 +66,9 @@ FusekiTest:
 
 You are now ready to populate and search your knowledge base.
 
-
 Populate your triplestore
 -------------------------
 
 First we can check that the triplestore is empty:
 
-
-
 Now add the ....
-
-

@@ -1,8 +1,14 @@
 # Documenting a CHADA workflow
 
+
 ![CHADA workflow](figs/SEM-CHADA-bpmn_diagram.png)
 
+Figure 1. BPMN diagram for the CHADA workflow.
+
+
 ![CHADA workflow](figs/SEM-CHADA-bpmn_legend.png)
+
+Figure 2. Explanation of symbols in the above BPMN diagram.
 
 
 ## Setting up the graph database

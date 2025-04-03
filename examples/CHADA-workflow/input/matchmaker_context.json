@@ -1,0 +1,6 @@
+{
+  "@context": {
+    "sem": "https://w3id.org/emmo/domain/sem#",
+    "chameo": "https://w3id.org/emmo/domain/characterisation-methodology/chameo#"
+  }
+}

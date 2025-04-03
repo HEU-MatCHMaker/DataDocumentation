@@ -79,8 +79,26 @@ FusekiTest:
 
 You are now ready to populate and search your knowledge base.
 
+The triplestore can be browsed online by going to localhost:3030. Note that the browser cannot have pop-up windoes
+blocked, as FUSEKI used a pop-up window for authentication.
+
 ## Populate your triplestore
 
 First we can check that the triplestore is empty:
+```bash
+datadoc --triplestore FusekiTest find
+```
+If nothing it returned, it means that the triplestore is empty.
 
-Now add the ....
+We can now add the documentation:
+
+```bash
+# First add the datasets
+datadoc --triplestore FusekiTest add input/datasets.csv --context input/matchmaker_context.json --dump ts.ttl
+
+# Add the samples
+datadoc --triplestore FusekiTest add input/material.csv --context input/matchmaker_context.json
+
+# Add the processes
+datadoc --triplestore FusekiTest add input/processes.csv --csv-options delimiter=, --context input/matchmaker_context.json
+```

@@ -102,5 +102,5 @@ datadoc --triplestore FusekiTest add input/datasets.csv --context input/matchmak
 datadoc --triplestore FusekiTest add input/material.csv --context input/matchmaker_context.json
 
 # Add the processes
-datadoc --triplestore FusekiTest add input/processes.csv --csv-options delimiter=, --context input/matchmaker_context.json
+datadoc --triplestore FusekiTest add input/processes.csv --csv-option delimiter=, --context input/matchmaker_context.json
 ```

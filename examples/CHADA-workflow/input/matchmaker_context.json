@@ -2,6 +2,8 @@
   "@context": {
     "": "https://he-matchmaker.eu/example/CHADA-workflow#",
     "sem": "https://w3id.org/emmo/domain/sem#",
-    "chameo": "https://w3id.org/emmo/domain/characterisation-methodology/chameo#"
+    "chameo": "https://w3id.org/emmo/domain/characterisation-methodology/chameo#",
+
+    "precedes": "https://w3id.org/emmo#EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d"
   }
 }

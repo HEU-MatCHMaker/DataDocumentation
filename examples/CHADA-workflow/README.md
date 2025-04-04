@@ -85,9 +85,11 @@ blocked, as FUSEKI used a pop-up window for authentication.
 ## Populate your triplestore
 
 First we can check that the triplestore is empty:
+
 ```bash
 datadoc --triplestore FusekiTest find
 ```
+
 If nothing it returned, it means that the triplestore is empty.
 
 We can now add the documentation:

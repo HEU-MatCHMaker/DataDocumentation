@@ -79,7 +79,8 @@ FusekiTest:
 
 You are now ready to populate and search your knowledge base.
 
-The triplestore can be browsed online by going to localhost:3030. Note that the browser cannot have pop-up windoes
+The triplestore can be browsed online by going to localhost:3030.
+Note that the browser cannot have pop-up windoes
 blocked, as FUSEKI used a pop-up window for authentication.
 
 ## Populate your triplestore
@@ -103,4 +104,84 @@ datadoc --triplestore FusekiTest add input/material.csv --context input/matchmak
 
 # Add the processes
 datadoc --triplestore FusekiTest add input/processes.csv --csv-option delimiter=, --context input/matchmaker_context.json
+```
+
+
+## Query the triplestore
+
+List the IRI of all the documented resources:
+
+```bash
+$ datadoc -t FusekiTest find
+https://he-matchmaker.eu/example/CHADA-workflow#sem_parameters
+https://he-matchmaker.eu/example/CHADA-workflow#bse_image
+https://he-matchmaker.eu/example/CHADA-workflow#eds_map
+https://he-matchmaker.eu/example/CHADA-workflow#chem_comp_map
+https://he-matchmaker.eu/example/CHADA-workflow#clustered_image
+https://he-matchmaker.eu/example/CHADA-workflow#phase_fractions
+https://he-matchmaker.eu/example/CHADA-workflow#material
+https://he-matchmaker.eu/example/CHADA-workflow#unpolished_sample
+https://he-matchmaker.eu/example/CHADA-workflow#uncoated_sample
+https://he-matchmaker.eu/example/CHADA-workflow#sample
+https://he-matchmaker.eu/example/CHADA-workflow#sem_characterisation
+https://he-matchmaker.eu/example/CHADA-workflow#sample_extraction
+https://he-matchmaker.eu/example/CHADA-workflow#sample_polishing
+https://he-matchmaker.eu/example/CHADA-workflow#sample_inspection
+https://he-matchmaker.eu/example/CHADA-workflow#sample_coating
+https://he-matchmaker.eu/example/CHADA-workflow#parameter_adjustment
+https://he-matchmaker.eu/example/CHADA-workflow#parameter_selection
+https://he-matchmaker.eu/example/CHADA-workflow#beam_alignment
+https://he-matchmaker.eu/example/CHADA-workflow#sem_image_acqusition
+https://he-matchmaker.eu/example/CHADA-workflow#eds_mapping
+https://he-matchmaker.eu/example/CHADA-workflow#bse_processing
+https://he-matchmaker.eu/example/CHADA-workflow#bse_preprocessing
+https://he-matchmaker.eu/example/CHADA-workflow#bse_postprocessing
+https://he-matchmaker.eu/example/CHADA-workflow#eds_processing
+https://he-matchmaker.eu/example/CHADA-workflow#eds_preprocessing
+https://he-matchmaker.eu/example/CHADA-workflow#eds_postprocessing
+https://he-matchmaker.eu/example/CHADA-workflow#result_analysis
+```
+
+Lets take a closer look at the documentation of the final result,
+which is the `:phase_fractions` dataset.  We use the `--format` option
+to specify that we want to list the result in JSON format
+
+```bash
+datadoc -t FusekiTest find --criteria @id=https://he-matchmaker.eu/example/CHADA-workflow#phase_fractions --format json
+```
+
+```json
+[
+  {
+    "@id": "https://he-matchmaker.eu/example/CHADA-workflow#phase_fractions",
+    "publisher": {
+      "@type": [
+        "http://xmlns.com/foaf/0.1/Agent",
+        "https://w3id.org/emmo#EMMO_2480b72b_db8d_460f_9a5f_c2912f979046"
+      ],
+      "name": "MatCHMaker"
+    },
+    "theme": [
+      "https://he-matchmaker.eu/",
+      "https://w3id.org/emmo/domain/characterisation-methodology/chameo#ScanningElectronMicroscopy",
+      "https://w3id.org/emmo/domain/theme/characterisation/SEM"
+    ],
+    "contactPoint": {
+      "hasName": "Geoffrey Daniel",
+      "@type": "http://www.w3.org/2006/vcard/ns#Kind"
+    },
+    "@type": [
+      "http://onto-ns.com/meta/matchmaker/0.1/PhaseFractions",
+      "http://www.w3.org/ns/dcat#Dataset",
+      "https://w3id.org/emmo#EMMO_194e367c_9783_4bf5_96d0_9ad597d48d9a",
+      "https://w3id.org/emmo/domain/sem#PhaseFractions"
+    ],
+    "distribution": {
+      "mediaType": "https://www.iana.org/assignments/media-types/application/vnd.ms-excel",
+      "@type": "http://www.w3.org/ns/dcat#Distribution"
+    },
+    "description": "Relative amount of the different phases in the sement",
+    "title": "Phase fractions"
+  }
+]
 ```

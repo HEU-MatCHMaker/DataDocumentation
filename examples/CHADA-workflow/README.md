@@ -193,3 +193,9 @@ $ datadoc -t FusekiTest find --criteria contactPoint.hasName="Geoffrey Daniel"
 https://he-matchmaker.eu/example/CHADA-workflow#clustered_image
 https://he-matchmaker.eu/example/CHADA-workflow#phase_fractions
 ```
+
+You can use the following command to get the turtle representation of all resources (output is not listed for brevity):
+
+```bash
+datadoc -t FusekiTest find --format=turtle
+```

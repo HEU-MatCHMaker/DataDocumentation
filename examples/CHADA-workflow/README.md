@@ -109,7 +109,7 @@ datadoc --triplestore FusekiTest add input/processes.csv --csv-option delimiter=
 
 ## Query the triplestore
 
-List the IRI of all the documented resources:
+We can use the `find` subcommand of `datadoc` to list the IRI of all the documented resources:
 
 ```bash
 $ datadoc -t FusekiTest find
@@ -142,13 +142,13 @@ https://he-matchmaker.eu/example/CHADA-workflow#eds_postprocessing
 https://he-matchmaker.eu/example/CHADA-workflow#result_analysis
 ```
 
-Lets take a closer look at the documentation of the final result,
-which is the `:phase_fractions` dataset.  We use the `--format` option
-to specify that we want to list the result in JSON format
+To take a closer look at the documentation of the final result, the `:phase_fractions` dataset, we can specify its `@id` with the `--criteria` option and change the output format to JSON using the `--format` option:
 
 ```bash
 datadoc -t FusekiTest find --criteria @id=https://he-matchmaker.eu/example/CHADA-workflow#phase_fractions --format json
 ```
+
+This will result in the following output:
 
 ```json
 [
@@ -184,4 +184,12 @@ datadoc -t FusekiTest find --criteria @id=https://he-matchmaker.eu/example/CHADA
     "title": "Phase fractions"
   }
 ]
+```
+
+List all resources that has Geoffrey Daniel as contact point:
+
+```bash
+$ datadoc -t FusekiTest find --criteria contactPoint.hasName="Geoffrey Daniel"
+https://he-matchmaker.eu/example/CHADA-workflow#clustered_image
+https://he-matchmaker.eu/example/CHADA-workflow#phase_fractions
 ```

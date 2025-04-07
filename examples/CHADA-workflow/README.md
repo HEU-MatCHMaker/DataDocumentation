@@ -29,7 +29,7 @@ Make sure that you are in the folder where you want your environment.
 Install tripper
 
     pip install -U pip
-    pip install "tripper[datadoc] @ git+https://github.com/EMMC-ASBL/tripper.git@master"
+    pip install "tripper[datadoc] @ git+https://github.com/EMMC-ASBL/tripper.git@matchmaker-demo"
 
 For handling of username and password
 

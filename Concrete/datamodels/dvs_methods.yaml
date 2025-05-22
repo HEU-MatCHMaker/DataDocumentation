@@ -1,0 +1,146 @@
+uri: http://onto-ns.com/meta/cement/0.1.1/dvs_data
+description: "Dynamic Vapor Sorption (DVS) method file containing global method settings and a sequence of sorption/desorption stages."
+dimensions:
+  N: "Number of stages in the method sequence"
+properties:
+  # File‐level metadata (scalars)
+  version:
+    type: string
+    description: "Version of the DVS-Advantage-Plus method file format."
+  method_name:
+    type: string
+    description: "Name of the measurement method."
+  method_description:
+    type: string
+    description: "Detailed description of the method purpose and sequence."
+  method_created:
+    type: string
+    description: "Timestamp when the method was created."
+  author:
+    type: string
+    description: "Name of the method author."
+  author_machine:
+    type: string
+    description: "Identifier of the machine used to create or edit the method."
+  update_sample_weight:
+    type: bool
+    description: "Whether the sample weight is updated at start of run."
+  save_data_interval:
+    type: int
+    unit: "seconds"
+    description: "Interval at which method data are recorded."
+  active_reservoir:
+    type: string
+    description: "Identifier of the solvent reservoir in use."
+  total_gas_flow_A:
+    type: float
+    unit: "sccm"
+    description: "Total carrier gas flow for channel A."
+  total_gas_flow_B:
+    type: float
+    unit: "sccm"
+    description: "Total carrier gas flow for channel B."
+  loop_control_mode_A:
+    type: string
+    description: "Control mode for maintaining partial pressure of Solvent A."
+  loop_control_mode_B:
+    type: string
+    description: "Control mode for maintaining partial pressure of Solvent B."
+  min_dmdt_stage_time:
+    type: float
+    unit: "minutes"
+    description: "Minimum duration enforced for any DMDT‐controlled stage."
+  max_dmdt_stage_time:
+    type: float
+    unit: "minutes"
+    description: "Maximum duration allowed for any DMDT‐controlled stage."
+  dmdt_stability_duration:
+    type: float
+    unit: "minutes"
+    description: "Time required to confirm stability of DMDT before advancing."
+  raman_scan_wait:
+    type: float
+    unit: "minutes"
+    description: "Delay after stage start before triggering Raman scan."
+  preheater_ramp_rate:
+    type: float
+    unit: "°C/min"
+    description: "Temperature ramp rate of the preheater."
+  run_dry_calibration:
+    type: bool
+    description: "Whether to perform a dry‐calibration run prior to measurement."
+  # Stage sequence definitions (arrays over N)
+  stage_number:
+    type: int
+    shape:
+      - N
+    description: "Ordinal index of the method stage."
+  stage_type:
+    type: string
+    shape:
+      - N
+    description: "Type of stage (e.g., sorption, desorption, hold)."
+  duration:
+    type: float
+    shape:
+      - N
+    unit: "minutes"
+    description: "Planned duration of the stage."
+  dmdt_value:
+    type: float
+    shape:
+      - N
+    unit: "%/minute"
+    description: "Target dm/dt value controlling stage progression."
+  start_partial_pressure_A:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Starting partial pressure setpoint for Solvent A."
+  stop_partial_pressure_A:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Ending partial pressure setpoint for Solvent A."
+  start_partial_pressure_B:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Starting partial pressure setpoint for Solvent B."
+  stop_partial_pressure_B:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Ending partial pressure setpoint for Solvent B."
+  incubator_temp:
+    type: float
+    shape:
+      - N
+    unit: "°C"
+    description: "Incubator temperature maintained during the stage."
+  video_enabled:
+    type: bool
+    shape:
+      - N
+    description: "Whether video recording is enabled for the stage."
+  raman_enabled:
+    type: bool
+    shape:
+      - N
+    description: "Whether Raman measurement is enabled for the stage."
+  chiller_temp:
+    type: float
+    shape:
+      - N
+    unit: "°C"
+    description: "Setpoint temperature of the chiller."
+  chiller_state:
+    type: string
+    shape:
+      - N
+    description: "Operational state of the chiller (e.g., on, off, standby)."
+

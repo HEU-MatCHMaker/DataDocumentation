@@ -1,0 +1,291 @@
+uri: http://onto-ns.com/meta/cement/0.1.1/dvs_data
+description: "Dynamic Vapor Sorption (DVS) measurement data file capturing time‐resolved mass change, temperature and gas flow control parameters, and file‐level metadata for each sample run."
+dimensions:
+  N: "Number of time points in the DVS measurement series"
+properties:
+  # File-level metadata (scalars)
+  file_version:
+    type: string
+    description: "Version of the DVS-Advantage-Plus data file format."
+  sequence_name:
+    type: string
+    description: "User-defined name of the measurement sequence."
+  sequence_created:
+    type: string
+    description: "Timestamp when the sequence was created."
+  method_name:
+    type: string
+    description: "Name of the measurement method."
+  method_created:
+    type: string
+    description: "Timestamp when the method was created."
+  method_modified:
+    type: string
+    description: "Timestamp when the method was last modified."
+  sample_number:
+    type: string
+    description: "Numeric identifier of the sample."
+  sample_name:
+    type: string
+    description: "Descriptive name of the sample."
+  sample_description:
+    type: string
+    description: "Additional description or notes for the sample."
+  initial_mass_mg:
+    type: float
+    unit: "mg"
+    description: "Initial mass of the sample before DVS measurement."
+  raw_data_file_created:
+    type: string
+    description: "Timestamp when the raw data file was created."
+  user_name:
+    type: string
+    description: "Operator or user who ran the measurement."
+  data_saving_interval_seconds:
+    type: int
+    unit: "s"
+    description: "Interval at which data points were recorded."
+  solvent_A:
+    type: string
+    description: "Identifier or name of Solvent A."
+  control_mode_solvent_A:
+    type: string
+    description: "Control mode used for Solvent A partial pressure."
+  solvent_B:
+    type: string
+    description: "Identifier or name of Solvent B."
+  control_mode_solvent_B:
+    type: string
+    description: "Control mode used for Solvent B partial pressure."
+  incubator_door_opened:
+    type: bool
+    description: "Whether the incubator door was opened during the run."
+  incubator_door_override:
+    type: bool
+    description: "Whether incubator door override was enabled."
+  data_points:
+    type: int
+    description: "Total number of data points recorded."
+  data_start_row:
+    type: int
+    description: "Row index where time-series data begins."
+  first_dry_row:
+    type: int
+    description: "Row index corresponding to first dry condition."
+  first_post_dry_row:
+    type: int
+    description: "Row index corresponding to first post-dry condition."
+  tare_option:
+    type: string
+    description: "Tare option setting for data file."
+  dry_mass_option:
+    type: string
+    description: "Dry mass option setting for data file."
+  m0_value:
+    type: float
+    description: "Baseline mass (M₀) used for normalization."
+  ref_mass_option:
+    type: string
+    description: "Reference mass option setting."
+  ref_mass:
+    type: float
+    description: "Reference mass value."
+  import_by_DLL_series:
+    type: string
+    description: "DLL import configuration identifier."
+  carrier_gas_A:
+    type: string
+    description: "Carrier gas used for Solvent A."
+  carrier_gas_B:
+    type: string
+    description: "Carrier gas used for Solvent B."
+  method_stage_skipped:
+    type: bool
+    description: "Whether any method stage was skipped."
+  method_skipped:
+    type: bool
+    description: "Whether the entire method was skipped."
+  method_status:
+    type: string
+    description: "Final status of the measurement method."
+  counter_weight_mg:
+    type: float
+    unit: "mg"
+    description: "Counterbalance weight used in the balance."
+  instrument_name:
+    type: string
+    description: "Name or model of the DVS instrument."
+  # Time-series measurement arrays (shape ["N"])
+  time:
+    type: float
+    shape:
+      - N
+    unit: "minutes"
+    description: "Elapsed time since start of measurement."
+  mass:
+    type: float
+    shape:
+      - N
+    unit: "mg"
+    description: "Sample mass at each time point."
+  delta_mass_percent:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Relative mass change (% of initial mass)."
+  dm_dt:
+    type: float
+    shape:
+      - N
+    unit: "%/minute"
+    description: "Time derivative of mass change."
+  target_incubator_temp:
+    type: float
+    shape:
+      - N
+    unit: "°C"
+    description: "Setpoint temperature of the incubator."
+  measured_incubator_temp:
+    type: float
+    shape:
+      - N
+    unit: "°C"
+    description: "Actual measured incubator temperature."
+  target_preheater_temp:
+    type: float
+    shape:
+      - N
+    unit: "°C"
+    description: "Setpoint temperature of the preheater."
+  measured_preheater_temp:
+    type: float
+    shape:
+      - N
+    unit: "°C"
+    description: "Actual measured preheater temperature."
+  sorption_temp:
+    type: float
+    shape:
+      - N
+    unit: "°C"
+    description: "Temperature of the sample during sorption."
+  target_pp_solvent_A:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Setpoint partial pressure for Solvent A."
+  measured_pp_solvent_A:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Actual partial pressure for Solvent A."
+  target_pp_solvent_B:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Setpoint partial pressure for Solvent B."
+  measured_pp_solvent_B:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Actual partial pressure for Solvent B."
+  total_gas_flow:
+    type: float
+    shape:
+      - N
+    unit: "sccm"
+    description: "Total gas flow rate."
+  target_wet_gas_flow_A:
+    type: float
+    shape:
+      - N
+    unit: "sccm"
+    description: "Setpoint wet gas flow for Solvent A."
+  actual_wet_gas_flow_A:
+    type: float
+    shape:
+      - N
+    unit: "sccm"
+    description: "Measured wet gas flow for Solvent A."
+  target_dry_gas_flow_A:
+    type: float
+    shape:
+      - N
+    unit: "sccm"
+    description: "Setpoint dry gas flow for Solvent A."
+  actual_dry_gas_flow_A:
+    type: float
+    shape:
+      - N
+    unit: "sccm"
+    description: "Measured dry gas flow for Solvent A."
+  target_wet_gas_flow_B:
+    type: float
+    shape:
+      - N
+    unit: "sccm"
+    description: "Setpoint wet gas flow for Solvent B."
+  actual_wet_gas_flow_B:
+    type: float
+    shape:
+      - N
+    unit: "sccm"
+    description: "Measured wet gas flow for Solvent B."
+  target_dry_gas_flow_B:
+    type: float
+    shape:
+      - N
+    unit: "sccm"
+    description: "Setpoint dry gas flow for Solvent B."
+  actual_dry_gas_flow_B:
+    type: float
+    shape:
+      - N
+    unit: "sccm"
+    description: "Measured dry gas flow for Solvent B."
+  dm_ref_percent:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Reference-normalized mass change (%)."
+  user_defined_1:
+    type: string
+    shape:
+      - N
+    description: "User-defined auxiliary data field 1."
+  user_defined_2:
+    type: string
+    shape:
+      - N
+    description: "User-defined auxiliary data field 2."
+  target_pp100_solvent_A:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Target partial pressure (PP/100) for Solvent A."
+  actual_pp100_solvent_A:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Actual partial pressure (PP/100) for Solvent A."
+  target_pp100_solvent_B:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Target partial pressure (PP/100) for Solvent B."
+  actual_pp100_solvent_B:
+    type: float
+    shape:
+      - N
+    unit: "%"
+    description: "Actual partial pressure (PP/100) for Solvent B."
+

@@ -288,4 +288,3 @@ properties:
       - N
     unit: "%"
     description: "Actual partial pressure (PP/100) for Solvent B."
-

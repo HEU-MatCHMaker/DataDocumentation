@@ -143,4 +143,3 @@ properties:
     shape:
       - N
     description: "Operational state of the chiller (e.g., on, off, standby)."
-

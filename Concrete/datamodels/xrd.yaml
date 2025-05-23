@@ -20,15 +20,9 @@ properties:
       - N
     unit: "%"
     description: "Mass loss on ignition between 75 °C and 550 °C."
-  wrv_ratio:
-    type: float
-    shape:
-      - N
-    description: "WRV/(1–H2O%) dimensionless normalization factor."
   phase_name:
     type: string
     shape:
-      - N
       - P
     description: "Name of the crystalline or amorphous phase measured in each sample."
   phase_fraction:
@@ -38,10 +32,3 @@ properties:
       - P
     unit: "%"
     description: "Mass fraction of each phase as determined by XRD."
-  phase_fraction_WRV:
-    type: float
-    shape:
-      - N
-      - P
-    unit: "%"
-    description: "WRV-normalized mass fraction of each phase."

@@ -1,4 +1,4 @@
-uri: http://onto-ns.com/meta/cement/0.1.1/dvs_data
+uri: http://onto-ns.com/meta/cement/0.1.1/dvs_methods
 description: "Dynamic Vapor Sorption (DVS) method file containing global method settings and a sequence of sorption/desorption stages."
 dimensions:
   N: "Number of stages in the method sequence"

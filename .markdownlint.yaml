@@ -1,20 +1,15 @@
 # Default state for all rules
 default: true
 
-# MD013/line-length - Line length
+# Multiple consecutive blank lines
+MD012:
+  maximum: 3
+
+# Line length
 MD013:
-  # Number of characters
-  # Set very long to support 1-sentence-per-line style.
-  line_length: 999
-  # Number of characters for headings (match that of black's default)
-  heading_line_length: 88
-  # Number of characters for code blocks (match that of black's default)
-  code_block_line_length: 88
-# MD003 header styles
-# According to the documentation this is triggered on a document per
-# document basis. However, it does not seem to work that way
-# see https://github.com/DavidAnson/markdownlint-cli2/issues/492
-# Set to false for now
-MD003: false
-  # Allow for setext style for header levels 1 and 2
-  # style: setext_with_atx
+  line_length: 256
+  code_block: false
+  tables: false
+
+# Code block style
+MD046: false

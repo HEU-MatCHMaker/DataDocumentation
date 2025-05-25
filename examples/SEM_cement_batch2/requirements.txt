@@ -1,0 +1,3 @@
+tripper[datadoc] @ git+https://github.com/EMMC-ASBL/tripper.git@save_csv_prefixes
+dlite-python
+#paramiko

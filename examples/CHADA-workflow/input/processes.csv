@@ -1,0 +1,18 @@
+@id,@type,title,description,theme,precedes,precedes,hasInput,hasInput,hasOutput,isTemporalPartOf
+:sem_characterisation,chameo:CharacterisationProcedure,SEM characterisation,SEM characterisation workflow of cement samples,https://he-matchmaker.eu/,,,,,,
+:sample_extraction,chameo:SampleExtraction,Sawing and embedding,Extraction of SEM sample from the casted sement by sawing,https://he-matchmaker.eu/,:sample_polishing,,:material,,:unpolished_sample,:sem_characterisation
+:sample_polishing,chameo:SamplePreparation,Polishing,Polishing the extracted SEM sampe,https://he-matchmaker.eu/,:sample_inspection,,:unpolished_sample,,:uncoated_sample,:sem_characterisation
+:sample_inspection,chameo:SampleInspection,Optical microscopy,Sample inspection by optical microscopy,https://he-matchmaker.eu/,:sample_coating,,:uncoated_sample,,,:sem_characterisation
+:sample_coating,chameo:SamplePreparation,Coating,Coating the SEM sample with carbon to make it electrical conducting,https://he-matchmaker.eu/,:sem_image_acquisition,:eds_mapping,:uncoated_sample,,:sample,:sem_characterisation
+:parameter_adjustment,chameo:MeasurementSystemAdjustment,Measurement parameter adjustment,Measurement parameter adjustment,https://he-matchmaker.eu/,:sem_image_acquisition,:eds_mapping,,,:sem_parameters,:sem_characterisation
+:parameter_selection,chameo:MeasurementSystemAdjustment,SEM parameter selection,"Select high tension, detectors, apertures, etc",https://he-matchmaker.eu/,:beam_alignment,,,,,:parameter_adjustment
+:beam_alignment,chameo:MeasurementSystemAdjustment,Beam alignment,Align the electron beam.,https://he-matchmaker.eu/,,,,,,:parameter_adjustment
+:sem_image_acqusition,chameo:CharacterisationMeasurementProcess,SEM image acquisition,Acquire back-scattered electron (BSE) images,https://he-matchmaker.eu/,:bse_processing,,:sample,:sem_parameters,:bse_image,:sem_characterisation
+:eds_mapping,chameo:CharacterisationMeasurementProcess,EDS mapping,Acquire electron dispersive spectroscopy (EDS) maps,https://he-matchmaker.eu/,:eds_processing,,:sample,:sem_parameters,:eds_map,:sem_characterisation
+:bse_processing,chameo:DataProcessing,Processing of BSE image,Processing of back-scattered image,https://he-matchmaker.eu/,:result_analysis,,:bse_image,,:clustered_image,:sem_characterisation
+:bse_preprocessing,chameo:DataPreparation,BSE pre-processing,Filter the BSE image and adjust contrast.,https://he-matchmaker.eu/,:bse_postprocessing,,,,,:bse_processing
+:bse_postprocessing,chameo:DataPostProcessing,BSE clustering,Cluster the combined BSE image and EDS map,https://he-matchmaker.eu/,,,,,,:bse_processing
+:eds_processing,chameo:DataProcessing,Processing of EDS map,Processing of EDS map,https://he-matchmaker.eu/,:bse_postprocessing,,:eds_map,,:chem_comp_map,:sem_characterisation
+:eds_preprocessing,chameo:DataPreparation,EDS binning,Pre-process EDS map by binning.,https://he-matchmaker.eu/,:eds_postprocessing,,,,,:eds_processing
+:eds_postprocessing,chameo:DataPostProcessing,EDS quantification,Use EDS map to quantify chemical composition.,https://he-matchmaker.eu/,,,,,,:eds_processing
+:result_analysis,chameo:DataAnalysis,Result analysis,Extraction of phase fractions,https://he-matchmaker.eu/,,,:clustered_image,:chem_comp_map,:phase_fractions,:sem_characterisation

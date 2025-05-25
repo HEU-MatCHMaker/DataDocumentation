@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "micro": "https://w3id.com/emmo/domain/microstructure/0.3#",
+    "sem": "https://w3id.com/emmo/domain/sem/0.1#",
+    "semdata": "https://he-matchmaker.eu/data/sem#",
+    "sample": "https://he-matchmaker.eu/sample#",
+    "mat": "https://he-matchmaker.eu/material#",
+    "dm02": "http://onto-ns.com/meta/matchmaker/0.2/",
+    "dm": "http://onto-ns.com/meta/matchmaker/0.2/SEMImage#",
+    "parser": "http://sintef.no/dlite/parser#",
+    "gen": "http://sintef.no/dlite/generator#"
+  },
+
+  "publisher": {
+    "@id": "dcterms:publisher",
+    "@type": "@id"
+  },
+  "name": "foaf:name",
+
+  "fromSample": {
+    "@id": "micro:fromSample",
+    "@type": "@id"
+  },
+  "magnification": {
+    "@id": "sem:magnification",
+    "@type": "xsd:integer"
+  },
+  "highVoltage_kV": {
+    "@id": "sem:highVoltage",
+    "@type": "xsd:double"
+  },
+  "positionNo": {
+    "@id": "sem:positionNo",
+    "@type": "xsd:integer"
+  },
+  "hasComposition": {
+    "@id": "micro:hasComposition",
+    "@type": "@id"
+  }
+
+}

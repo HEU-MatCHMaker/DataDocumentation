@@ -1,4 +1,4 @@
-uri: http://onto-ns.com/meta/matchmaker/0.2/SEMImage
+uri: http://onto-ns.com/meta/characterisation/SEM/0.2/SEMImage
 description: |
   SEM image with elemental mappings. Represented as a stack of elemental mapping
   followed by the image formed by the back-scattered electrons (BSE).

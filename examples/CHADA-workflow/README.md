@@ -1,12 +1,12 @@
 # Documenting a CHADA workflow
 
 
-![CHADA workflow](figs/SEM-CHADA-bpmn_diagram.png)
+![CHADA workflow](figs/SEM-CHADA-bpmn.png)
 
 Figure 1. BPMN diagram for the CHADA workflow.
 
 
-![CHADA workflow](figs/SEM-CHADA-bpmn_legend.png)
+![CHADA workflow](figs/SEM-CHADA-bpmn-legend.png)
 
 Figure 2. Explanation of symbols in the above BPMN diagram.
 
@@ -29,7 +29,7 @@ Make sure that you are in the folder where you want your environment.
 Install tripper
 
     pip install -U pip
-    pip install "tripper[datadoc] @ git+https://github.com/EMMC-ASBL/tripper.git@master"
+    pip install "tripper[datadoc] @ git+https://github.com/EMMC-ASBL/tripper.git@matchmaker-demo"
 
 For handling of username and password
 

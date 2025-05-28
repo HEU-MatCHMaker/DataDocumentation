@@ -1,0 +1,268 @@
+uri: http://onto-ns.com/meta/cement/0.1.1/tg_ms_analysis
+description: "Coupled thermogravimetric (TG) and mass spectrometry (MS) analysis of hydrated cement samples, including raw measurement series, ion currents for multiple m/z channels, sample metadata, smoothing parameters, and decomposition‐event summaries."
+dimensions:
+  N: "Number of temperature points in the TG–MS measurement series"
+  E: "Number of decomposition or analysis events (e.g., bound water, portlandite, carbonates, etc.)"
+properties:
+  # Sample metadata (scalars)
+  sample_name:
+    type: string
+    description: "Name of the cement sample (e.g., C-MK-L_4-6h)."
+  lot_number:
+    type: string
+    description: "Lot number or LN identifier (e.g., 65243-002)."
+  data_file:
+    type: string
+    description: "Raw data file name (e.g., 65243-002_bme.ngb-dt9)."
+  instrument:
+    type: string
+    description: "Instrument used for TG measurement (e.g., NETZSCH TG 209F1 Libra)."
+  temperature_program:
+    type: string
+    description: "Temperature range and heating rate program (e.g., 30 °C/10 K/min to 950 °C)."
+  correction:
+    type: string
+    description: "Correction applied to the MS data (e.g., Correction for method 10K_0950 °C_MS_MID_14Massen_Argon_PUl01)."
+  # Smoothing parameters
+  smoothen_points:
+    type: int
+    description: "Number of points used for smoothing moving-average (e.g., 31)."
+      # TG–MS measurement series (arrays over N)
+  temperature:
+    type: float
+    shape: ["N"]
+    unit: "°C"
+    description: "Temperature at each measurement point."
+  mass:
+    type: float
+    shape: ["N"]
+    unit: "wt.-%"
+    description: "Measured sample mass as weight percent of initial mass."
+  smoothen_mass:
+    type: float
+    shape: ["N"]
+    unit: "wt.-%"
+    description: "Smoothed mass curve using the specified smoothing window."
+  derivative:
+    type: float
+    shape: ["N"]
+    unit: "dwt.-%/d°C"
+    description: "Temperature derivative of the mass curve."
+  # MS ion currents and assignments for each m/z channel
+  IonCurrent_m14:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at mass‐to‐charge ratio 14."
+  N2_m14:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of N₂ at m/z 14."
+  N2_m14_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for N₂ (m/z 14)."
+  IonCurrent_m17:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 17."
+  Water_m17:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of H₂O at m/z 17."
+  Water_m17_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for H₂O (m/z 17)."
+  IonCurrent_m18:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 18."
+  Water_m18:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of H₂O at m/z 18."
+  Water_m18_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for H₂O (m/z 18)."
+  IonCurrent_m22:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 22."
+  CO2_m22:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of CO₂ at m/z 22."
+  CO2_m22_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for CO₂ (m/z 22)."
+  IonCurrent_m31:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 31."
+  Glycol_m31:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of glycol fragment at m/z 31."
+  Glycol_m31_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for glycol (m/z 31)."
+  IonCurrent_m32:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 32."
+  O2_m32:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of O₂ at m/z 32."
+  O2_m32_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for O₂ (m/z 32)."
+  IonCurrent_m33:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 33."
+  Glycol_m33:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of glycol fragment at m/z 33."
+  Glycol_m33_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for glycol (m/z 33)."
+  IonCurrent_m42:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 42."
+  Glycol_m42:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of glycol fragment at m/z 42."
+  Glycol_m42_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for glycol (m/z 42)."
+  IonCurrent_m44:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 44."
+  CO2_m44:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of CO₂ at m/z 44."
+  CO2_m44_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for CO₂ (m/z 44)."
+  IonCurrent_m45:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 45."
+  CO2_Isopropanol_m45:
+    type: float
+    shape: ["N"]
+    description: "Assigned combined contribution of CO₂ and isopropanol at m/z 45."
+  CO2_Isopropanol_m45_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for CO₂ and isopropanol (m/z 45)."
+  IonCurrent_m48:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 48."
+  SO2_m48:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of SO₂ at m/z 48."
+  SO2_m48_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for SO₂ (m/z 48)."
+  IonCurrent_m59:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 59."
+  Isopropanol_m59:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of isopropanol at m/z 59."
+  Isopropanol_m59_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for isopropanol (m/z 59)."
+  IonCurrent_m64:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 64."
+  SO2_m64:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of SO₂ at m/z 64."
+  SO2_m64_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for SO₂ (m/z 64)."
+  IonCurrent_m80:
+    type: float
+    shape: ["N"]
+    unit: "A"
+    description: "Raw ion current at m/z 80."
+  SO3_m80:
+    type: float
+    shape: ["N"]
+    description: "Assigned partial contribution of SO₃ at m/z 80."
+  SO3_m80_normalized:
+    type: float
+    shape: ["N"]
+    description: "Normalized ion current for SO₃ (m/z 80)."
+  # Decomposition/event summaries (arrays over E)
+  event_name:
+    type: string
+    shape: ["E"]
+    description: "Name of the decomposition or analysis event (e.g., Bound water, Portlandite, Carbonates, Total mass lost, Carbonates MS)."
+  event_Tmin:
+    type: float
+    shape: ["E"]
+    unit: "°C"
+    description: "Starting temperature for the event interval."
+  event_Tmax:
+    type: float
+    shape: ["E"]
+    unit: "°C"
+    description: "Ending temperature for the event interval."
+  event_g_per_100g_cement:
+    type: float
+    shape: ["E"]
+    unit: "g/100 g unhydrated cement"
+    description: "Mass loss or evolved gas amount per 100 g unhydrated cement."
+  event_weight_loss_percent:
+    type: float
+    shape: ["E"]
+    unit: "%"
+    description: "Weight loss expressed as percent of the initial sample mass."
+  event_mTmin_percent:
+    type: float
+    shape: ["E"]
+    unit: "%"
+    description: "Derivative (d mass/dT) at starting temperature, as percent."
+  event_mTmax_percent:
+    type: float
+    shape: ["E"]
+    unit: "%"
+    description: "Derivative (d mass/dT) at ending temperature, as percent."

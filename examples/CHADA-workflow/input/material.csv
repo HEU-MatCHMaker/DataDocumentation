@@ -1,5 +1,5 @@
 @id,@type,title,description,theme,theme,contactPoint.hasName
-:material,emmo:Material,Cement,Cement casting.,https://he-matchmaker.eu/,https://w3id.org/emmo/domain/concrete,Alexandre Ouzia
-:unpolished_sample,@chameo:Sample,Unpolished sample,Unpolished SEM sample from cured cement paste.,https://he-matchmaker.eu/,,Alexandre Ouzia
-:uncoated_sample,@chameo:Sample,Uncoated sample,Uncoated SEM sample from cured cement paste.,https://he-matchmaker.eu/,,Sigurd Wenner
-:sample,@chameo:Sample,Sample,SEM sample from cured cement paste.,https://he-matchmaker.eu/,,Sigurd Wenner
+mat:material,emmo:Material,Cement,Cement casting.,https://he-matchmaker.eu/,https://w3id.org/emmo/domain/concrete,Alexandre Ouzia
+mat:unpolished_sample,chameo:Sample,Unpolished sample,Unpolished SEM sample from cured cement paste.,https://he-matchmaker.eu/,,Alexandre Ouzia
+mat:uncoated_sample,chameo:Sample,Uncoated sample,Uncoated SEM sample from cured cement paste.,https://he-matchmaker.eu/,,Sigurd Wenner
+mat:sample,chameo:Sample,Sample,SEM sample from cured cement paste.,https://he-matchmaker.eu/,,Sigurd Wenner

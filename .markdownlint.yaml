@@ -13,3 +13,6 @@ MD013:
 
 # Code block style
 MD046: false
+
+# Accept both atx and setext header style
+MD003: false

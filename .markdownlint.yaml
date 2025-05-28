@@ -1,12 +1,18 @@
 # Default state for all rules
 default: true
 
-# MD013/line-length - Line length
+# Multiple consecutive blank lines
+MD012:
+  maximum: 3
+
+# Line length
 MD013:
-  # Number of characters
-  # Set very long to support 1-sentence-per-line style.
-  line_length: 999
-  # Number of characters for headings (match that of black's default)
-  heading_line_length: 88
-  # Number of characters for code blocks (match that of black's default)
-  code_block_line_length: 88
+  line_length: 256
+  code_block: false
+  tables: false
+
+# Code block style
+MD046: false
+
+# Accept both atx and setext header style
+MD003: false

@@ -1,0 +1,20 @@
+uri: http://onto-ns.com/meta/cement/0.1/CompressiveStrength
+description: A list of mortar strength test measurements of limestone calcined clay cements. Input data is the vector that characterizes the composition and the material elaboration. The number of variables that characterize the composition and the elaboration can be up to 26.
+dimensions:
+  nX: Number of initial columns with parameters.
+  nmeasurements: Number of compression measurements (number of rows after stacking).
+properties:
+  X:
+    type: float
+    shape: [nmeasurements, nX]
+    description: Parameters for compositional ratio, mineralogy, chemistry and physical properties.
+  curing_time:
+    type: int
+    shape: [nmeasurements]
+    unit: day
+    description: Curing time in days.
+  mortar_strength:
+    type: float
+    shape: [nmeasurements]
+    unit: MPa
+    description: Concrete Mortar strength after the given curing time.

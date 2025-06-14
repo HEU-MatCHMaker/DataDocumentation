@@ -48,7 +48,7 @@ with extra dependencies for data documentation is now installed.
 
 Clone the DataDocumentation folder to where you want.
 
-    git clone git@github.com:HEU-MatCHMaker/DataDocumentation.git
+    git clone https://github.com/HEU-MatCHMaker/DataDocumentation.git
     cd DataDocumentation/examples/CHADA-workflow
 
 

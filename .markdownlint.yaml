@@ -16,3 +16,8 @@ MD046: false
 
 # Accept both atx and setext header style
 MD003: false
+
+# Table column style
+MD060:
+  aligned_delimiter: false
+  style: any

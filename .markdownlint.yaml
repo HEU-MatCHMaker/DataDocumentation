@@ -12,7 +12,7 @@ MD013:
   tables: false
 
 # Multiple headings with the same content
-MD024: false
+#MD024: false
 
 # Code block style
 MD046: false

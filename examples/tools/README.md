@@ -1,13 +1,12 @@
-Semantic documentation of tools, datasets and workflows
-=======================================================
+# Semantic documentation of tools, datasets and workflows
 
-This example is intended to be a simple guide for how to do a step-by-step documentation of
+This example is intended to be a simple guide for how to step-by-step semantically document software tools, datasets and workflows.
 
-- [Semantic documentation of tools, datasets and workflows](#semantic-documentation-of-tools-datasets-and-workflows)
-  - [Important underlying principles](#important-underlying-principles)
+- [Important underlying principles](#important-underlying-principles)
+  - [Individuals versus Classes](#individuals-versus-classes)
   - [Documenting the processes and their relationships to potential real datasets](#documenting-the-processes-and-their-relationships-to-potential-real-datasets)
   - [Documenting the actual datasets and executed workflows](#documenting-the-actual-datasets-and-executed-workflows)
-  - [How to do this in practice](#how-to-do-this-in-practice)
+- [How to do this in practice](#how-to-do-this-in-practice)
   - [1. Documentation of software tools](#1-documentation-of-software-tools)
   - [2. Documentation of related resources](#2-documentation-of-related-resources)
   - [3. Documentation of dataset types](#3-documentation-of-dataset-types)
@@ -15,31 +14,32 @@ This example is intended to be a simple guide for how to do a step-by-step docum
   - [5. Documentation of executed workflows](#5-documentation-of-executed-workflows)
   - [6. Documentation of content of datasets](#6-documentation-of-content-of-datasets)
 
-### Important underlying principles ###
 
-- **Individuals versus Classes**:
-    We distinguish between individuals and classes. Individuals are specific instances of a concept, while classes are general categories that can have multiple instances. For example, a specific software tool would be an individual, while the category of software tools would be a class.
+## Important underlying principles ##
+
+### Individuals versus Classes ###
+
+We distinguish between individuals and classes. Individuals are specific instances of a concept, while classes are general categories that can have multiple instances. For example, a specific software tool would be an individual, while the category of software tools would be a class.
 
 
 ### Documenting the processes and their relationships to potential real datasets ###
 
-The figure below illustrates the documentation of step 1 to 3, where a **computation class** is related to a **software individual** and the types of datasets (i.e. **dataset classes**) it takes as input and output. It is important to realise that at this level of the documentation we
-focus on documenting the processes that we can run and their relationships to potential real datasets.
+The figure below illustrates the documentation of software tools the type of computation they implements and the type of datasets it takes as input and output (step 1 to 3 under [How to do this in practice]).
+Here a **computation class** is related to a **software individual** and the types of datasets (i.e. **dataset classes**) it takes as input and output.
+It is important to realise that at this level of the documentation we focus on documenting the processes that we can run and their relationships to potential real datasets.
 
 
 ![Documentation of step 1 to 3.](https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/datadoc-example/examples/tools/figs/computation.svg)
 
 ### Documenting the actual datasets and executed workflows ###
 
-Once the **types of**  proesses and datasets that we treat have been documented,
-it is possible to document actual datasets and workflows (step 4 and 5).
-This principle on how the classes (the concepts) and individuals (actual instances)
-are related is shown in the figure below.
+Once the **types of**  proesses and datasets that we treat have been documented, it is possible to document actual datasets and workflows (step 4 and 5).
+This principle on how the classes (the concepts) and individuals (actual instances) are related is shown in the figure below.
 
 ![Documentation of step 4 and 5.](https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/datadoc-example/examples/tools/figs/workflow.svg)
 
 
-### How to do this in practice ###
+## How to do this in practice ##
 
 The main interface for this semantic documentation is simple spreadsheets with well-defined column headers.
 The names in the column headers are under the hood mapped to ontological concepts via a [JSON-LD] context.
@@ -58,11 +58,11 @@ The values in this column should also be an IRI identifying an ontological conce
 General values for the type are described in the following sections, which also explains how the templates should be filled out.
 
 
-## 1. Documentation of software tools
+### 1. Documentation of software tools ###
 
 For a minimal documentation of a software tool, the user should fill in table such as the one below.
 See the [software template] for a more elaborate template.
-    Note that software tools are documented as individials in the ontology, and not as classes, since we are documenting specific instances of software tools, and not general categories of software tools.
+Note that software tools are documented as individials in the ontology, and not as classes, since we are documenting specific instances of software tools, and not general categories of software tools.
 
 | @id | @type | title | description |
 |-----|-------|-------|-------------|
@@ -76,23 +76,23 @@ The expected values for each column are:
 - **description**: A human readable description of the software, also a string.
 
 
-## 2. Documentation of related resources
+### 2. Documentation of related resources ###
 
 The aim of the documentation is to enhance reusability by providing context in the form of [linked data], that relates the various resources to each other using relations with semantically well-defined meaning.
 
 Hence, the table in the previous section can be extended with additional columns.
 
 
-## 3. Documentation of dataset types
+### 3. Documentation of dataset types ###
 
 
-## 4. Documentation of actual datasets
+### 4. Documentation of actual datasets ###
 
 
-## 5. Documentation of executed workflows
+### 5. Documentation of executed workflows ###
 
 
-## 6. Documentation of content of datasets
+### 6. Documentation of content of datasets ###
 
 
 

@@ -59,7 +59,7 @@ General values for the type are described in the following sections, which also 
 ## 1. Documentation of software tools
 
 For a minimal documentation of a software tool, the user should fill in table such as the one below.
-See the [software template] for a more elaborate template. 
+See the [software template] for a more elaborate template.
     Note that software tools are documented as individials in the ontology, and not as classes, since we are documenting specific instances of software tools, and not general categories of software tools.
 
 | @id | @type | title | description |

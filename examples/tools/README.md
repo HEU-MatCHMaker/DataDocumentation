@@ -234,6 +234,7 @@ See [user-defined keywords] in the [Tripper] documentation for how to extend the
 [license chooser]: https://choosealicense.com/
 [list of standard open-source licenses]: https://choosealicense.com/appendix/
 [UpperCamelCase]: https://en.wikipedia.org/wiki/Camel_case
+[EMMO]: https://w3id.org/emmo/
 [DCAT]: https://www.w3.org/TR/vocab-dcat-3/
 [Tripper]: https://emmc-asbl.github.io/tripper/
 [pre-defined keywords]: https://emmc-asbl.github.io/tripper/latest/datadoc/keywords/

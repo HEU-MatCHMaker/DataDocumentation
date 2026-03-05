@@ -33,9 +33,10 @@ The values in this column should also be an IRI identifying an ontological conce
 General values for the type are described in the following sections, which also tries to explain how the templates should be filled out.
 
 
-1. Documentation of software tools
+1: Documentation of software tools
 ----------------------------------
-For a minimal documentation of a software tool, the user should fill in the following table:
+For a minimal documentation of a software tool, the user should fill in the table below.
+See the [software template] for a more elaborate template.
 
 | @id | @type | title | description |
 |-----|-------|-------|-------------|
@@ -52,6 +53,7 @@ The expected values for each column are:
 
 [JSON-LD]: https://json-ld.org/
 [spreadsheet templates]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates
+[software template]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/software.csv
 [unique and persistent identifiers]: https://faircookbook.elixir-europe.org/content/recipes/findability/identifiers.html
 [URI]: https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
 [CURIE]: https://www.w3.org/TR/2010/NOTE-curie-20101216/

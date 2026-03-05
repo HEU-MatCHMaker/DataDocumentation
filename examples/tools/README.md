@@ -11,6 +11,7 @@ This example is intended to be a simple guide for how to do a step-by-step docum
 6. [content of datasets](#6-documentation-of-content-of-datasets) (in terms of data models)
 
 The figure below illustrates the documentation of step 1 to 3, where a class of computations is related to a software and the types of datasets it takes as input and output.
+The colour coding shows existing resources (classes/individuals) in yellow and resources documented here in blue.
 
 ![Documentation of step 1 to 3.](https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/datadoc-example/examples/tools/figs/computation.svg)
 

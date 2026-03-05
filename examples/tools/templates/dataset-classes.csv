@@ -1,0 +1,5 @@
+@id,@type,subClassOf,label,description,rightsHolder,license
+mm:my_dataset1,mm:MyDataset1,emmo:Dataset,Dataset 1,Description of dataset 1.,https://ror.org/0422tvz87,https://creativecommons.org/licenses/by/4.0/
+mm:my_dataset2,mm:MyDataset2,emmo:Dataset,Dataset 2,Description of dataset 2.,https://ror.org/0422tvz87,https://creativecommons.org/licenses/by/4.0/
+mm:my_dataset3,mm:MyDataset3,emmo:Dataset,Dataset 3,Description of dataset 3.,https://ror.org/0422tvz87,https://creativecommons.org/licenses/by/4.0/
+mm:my_dataset4,mm:MyDataset4,emmo:Dataset,Dataset 4,Description of dataset 4.,https://ror.org/0422tvz87,https://creativecommons.org/licenses/by/4.0/

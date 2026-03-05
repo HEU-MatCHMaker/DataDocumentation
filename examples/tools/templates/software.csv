@@ -1,0 +1,2 @@
+@id,@type,title,description,rightsHolder,license,distribution.accessURL
+mm:my_software,emmo:Software,My software,Description of my software...,https://ror.org/0422tvz87,https://creativecommons.org/licenses/by/4.0/,https://github.com/HEU-MatCHMaker/my_software

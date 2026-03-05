@@ -1,8 +1,4 @@
-@id,@type,subClassOf,label,description,hasInput,hasOutput,isParticipatedBy
-mm:MyComputation,owl:Class,emmo:Computation,MyComputation,"Description of this specific computation procedure...",mm:MyDataset1,mm:MyDataset2,mm:my_software
-mm:MyComputation1,owl:Class,emmo:Computation,MyComputation1,"Description of computation 1...",mm:MyDataset1,mm:MyDataset2,
-mm:MyComputation2,owl:Class,emmo:Computation,MyComputation2,"Description of computation 2...",mm:MyDataset2,mm:MyDataset3,
-mm:MyComputation3,owl:Class,emmo:Computation,MyComputation3,"Description of computation 3...",mm:MyDataset3,mm:MyDataset4,
-mm:my_computation1,mm:MyComputation1,,,,mm:my_dataset1,mm:my_dataset2,
-mm:my_computation2,mm:MyComputation2,,,,mm:my_dataset2,mm:my_dataset3,
-mm:my_computation3,mm:MyComputation3,,,,mm:my_dataset3,mm:my_dataset4,
+@id,@type,description,hasInput,hasOutput
+mm:my_computation1,mm:MyComputation1,,mm:my_dataset1,mm:my_dataset2
+mm:my_computation2,mm:MyComputation2,,mm:my_dataset2,mm:my_dataset3
+mm:my_computation3,mm:MyComputation3,,mm:my_dataset3,mm:my_dataset4

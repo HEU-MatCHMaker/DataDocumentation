@@ -1,5 +1,6 @@
 Semantic documentation of tools, datasets and workflows
 =======================================================
+
 This example is intended to be a simple guide for how to do a step-by-step documentation of
 
 1. software tools
@@ -25,7 +26,7 @@ Each documented resource will be a row in one of these templates.
 
 Since the FAIR principles demands that all resources must have a globally [unique and persistent identifier], all the templates has a column labeled "@id".
 This column should contain an IRI.
-These IRIs can be written is as [URI]s, like https://he-matchmaker.eu/resource/my_software, or as compact URIs (so-called [CURIE]s), like mm:my_software, where the prefix `mm` is a shorthand for the namespace https://he-matchmaker.eu/resource/, intended for MatCHMaker-owned resources.
+These IRIs can be written is as [URI]s, like <https://he-matchmaker.eu/resource/my_software>, or as compact URIs (so-called [CURIE]s), like mm:my_software, where the prefix `mm` is a shorthand for the namespace <https://he-matchmaker.eu/resource/>, intended for MatCHMaker-owned resources.
 
 For semantics, it is also important to document the type of the resource.
 Hence, all templates also has a column labeled "@type".
@@ -33,8 +34,7 @@ The values in this column should also be an IRI identifying an ontological conce
 General values for the type are described in the following sections, which also tries to explain how the templates should be filled out.
 
 
-1: Documentation of software tools
-----------------------------------
+## 1. Documentation of software tools
 For a minimal documentation of a software tool, the user should fill in the table below.
 See the [software template] for a more elaborate template.
 

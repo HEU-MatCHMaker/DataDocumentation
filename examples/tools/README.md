@@ -88,7 +88,7 @@ For that, we will add a few additional columns to our table:
 
 | @id            | @type         | title       | description                   | rightsHolder              | license                                      | landingPage                                   |
 |----------------|---------------|-------------|-------------------------------|---------------------------|----------------------------------------------|-----------------------------------------------|
-| mm:my_software | emmo:Software | My Software | Description of my software... | https://ror.org/0422tvz87 | https://creativecommons.org/licenses/by/4.0/ | https://github.com/HEU-MatCHMaker/my_software |
+| mm:my_software | emmo:Software | My Software | Description of my software... | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://github.com/HEU-MatCHMaker/my_software> |
 
 Meaning of the extra columns:
 
@@ -147,10 +147,10 @@ The table below shows a simple generic example of documentation of a few dataset
 
 | @id            | @type         | title     | description               | rightsHolder              | license                                      | creator                               | distribution.downloadURL                                                                                              |
 |----------------|---------------|-----------|---------------------------|---------------------------|----------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| mm:my_dataset1 | mm:MyDataset1 | Dataset 1 | Description of dataset 1. | https://ror.org/0422tvz87 | https://creativecommons.org/licenses/by/4.0/ | https://orcid.org/0000-0002-1560-809X | https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/examples/tools/data/dataset1.txt |
-| mm:my_dataset2 | mm:MyDataset2 | Dataset 2 | Description of dataset 2. | https://ror.org/0422tvz87 | https://creativecommons.org/licenses/by/4.0/ | https://orcid.org/0000-0002-1560-809X | https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/examples/tools/data/dataset2.txt |
-| mm:my_dataset3 | mm:MyDataset3 | Dataset 3 | Description of dataset 3. | https://ror.org/0422tvz87 | https://creativecommons.org/licenses/by/4.0/ | https://orcid.org/0000-0002-1560-809X | https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/examples/tools/data/dataset3.txt |
-| mm:my_dataset4 | mm:MyDataset4 | Dataset 4 | Description of dataset 4. | https://ror.org/0422tvz87 | https://creativecommons.org/licenses/by/4.0/ | https://orcid.org/0000-0002-1560-809X | https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/examples/tools/data/dataset4.txt |
+| mm:my_dataset1 | mm:MyDataset1 | Dataset 1 | Description of dataset 1. | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://orcid.org/0000-0002-1560-809X> | <https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/examples/tools/data/dataset1.txt> |
+| mm:my_dataset2 | mm:MyDataset2 | Dataset 2 | Description of dataset 2. | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://orcid.org/0000-0002-1560-809X> | <https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/examples/tools/data/dataset2.txt> |
+| mm:my_dataset3 | mm:MyDataset3 | Dataset 3 | Description of dataset 3. | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://orcid.org/0000-0002-1560-809X> | <https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/examples/tools/data/dataset3.txt> |
+| mm:my_dataset4 | mm:MyDataset4 | Dataset 4 | Description of dataset 4. | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://orcid.org/0000-0002-1560-809X> | <https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/examples/tools/data/dataset4.txt> |
 
 It is often possible to generate the above table using a script that traverse the folder structure where you have your datasets are stored.
 
@@ -196,6 +196,7 @@ From the added columns, it is possible to generate DLite data models that descri
 | mm:MyDataset2 | owl:Class | emmo:Dataset | MyDataset2 | Definition of dataset 2. | bond_length  | float        | Å            | nbonds        | Length of each atomic bond.    | atomistic:BondLength | bond_energy  | float        | eV           | nbonds        | Bond energy of each bond. | atomistic:BondEnergy |
 
 The meaning of the added columns are:
+
 - **datumName**: A local name of the datum/property. Should be a string without spaces.
 - **datumType**: Type of the datum/property. Use one of bool, int, float, string. For int and float the number of bits can be added. E.g. int32, float64.
 - **datumUnit**: Unit of the datum/property. Leave empty if dimensionless.
@@ -206,12 +207,12 @@ The meaning of the added columns are:
 
 ## List of templates ##
 
-* [agents.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/agents.csv)
-* [computations.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/computations.csv)
-* [computation-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/computation-classes.csv)
-* [datasets.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/datasets.csv)
-* [dataset-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/dataset-classes.csv)
-* [software.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/software.csv)
+- [agents.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/agents.csv)
+- [computations.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/computations.csv)
+- [computation-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/computation-classes.csv)
+- [datasets.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/datasets.csv)
+- [dataset-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/dataset-classes.csv)
+- [software.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/software.csv)
 
 
 These templates can be extended with additional columns.
@@ -231,8 +232,6 @@ See [user-defined keywords] in the [Tripper] documentation for how to extend the
 [list of standard open-source licenses]: https://choosealicense.com/appendix/
 [UpperCamelCase]: https://en.wikipedia.org/wiki/Camel_case
 [DCAT]: https://www.w3.org/TR/vocab-dcat-3/
-[DCAT-AP]: https://semiceu.github.io/DCAT-AP/releases/3.0.1/
-[PROV-O]: https://www.w3.org/TR/prov-o/
 [Tripper]: https://emmc-asbl.github.io/tripper/
 [pre-defined keywords]: https://emmc-asbl.github.io/tripper/latest/datadoc/keywords/
 [user-defined keywords]: https://emmc-asbl.github.io/tripper/latest/datadoc/customisation/#user-defined-keywords

@@ -54,6 +54,10 @@ The expected values for each column are:
 
 ## 2. Documentation of related resources
 
+The aim of the documentation is to enhance reusability by providing context in the form of [linked data], that relates the various resources to each other using relations with semantically well-defined meaning.
+
+Hence, the table in the previous section can be extended with additional columns.
+
 
 ## 3. Documentation of dataset types
 
@@ -73,3 +77,4 @@ The expected values for each column are:
 [software template]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/software.csv
 [URI]: https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
 [CURIE]: https://www.w3.org/TR/2010/NOTE-curie-20101216/
+[linked data]: https://en.wikipedia.org/wiki/Linked_data

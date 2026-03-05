@@ -4,11 +4,11 @@ Semantic documentation of tools, datasets and workflows
 This example is intended to be a simple guide for how to do a step-by-step documentation of
 
 1. [software tools](#1-documentation-of-software-tools)
-2. related resources, like its owner and license
-3. classes/types of datasets it takes as input and returns as output
-4. actual datasets
-5. executed workflows
-6. the content of datasets (in terms of data models)
+2. [related resources](#2-documentation-of-related-resources), like software owner and license
+3. [types of datasets](#3-documentation-of-dataset-types) it takes as input and returns as output
+4. [actual datasets](#4-documentation-of-actual-datasets)
+5. [executed workflows](#5-documentation-of-executed-workflows)
+6. [content of datasets](#6-documentation-of-content-of-datasets) (in terms of data models)
 
 The figure below illustrates the documentation of step 1 to 3, where a class of computations is related to a software and the types of datasets it takes as input and output.
 
@@ -49,6 +49,22 @@ The expected values for each column are:
 - **@type**: Type of the software. In the general case, it could be `emmo:Software`, but if a more specialised subclass is known, it should be used.
 - **title**: Name or title of the software.
 - **description**: A human readable description of the software.
+
+
+## 2. Documentation of related resources
+
+
+## 3. Documentation of dataset types
+
+
+## 4. Documentation of actual datasets
+
+
+## 5. Documentation of executed workflows
+
+
+## 6. Documentation of content of datasets
+
 
 
 

@@ -68,7 +68,6 @@ The expected values for each column are:
 
 
 
-
 [JSON-LD]: https://json-ld.org/
 [spreadsheet templates]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates
 [software template]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/software.csv

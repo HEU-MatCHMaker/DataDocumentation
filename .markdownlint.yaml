@@ -11,6 +11,9 @@ MD013:
   code_block: false
   tables: false
 
+# Multiple headings with the same content
+MD024: false
+
 # Code block style
 MD046: false
 

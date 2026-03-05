@@ -3,7 +3,7 @@ Semantic documentation of tools, datasets and workflows
 
 This example is intended to be a simple guide for how to do a step-by-step documentation of
 
-1. software tools
+1. [software tools](#1-documentation-of-software-tools)
 2. related resources, like its owner and license
 3. classes/types of datasets it takes as input and returns as output
 4. actual datasets

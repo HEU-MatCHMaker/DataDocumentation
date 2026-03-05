@@ -25,6 +25,7 @@ This example is intended to be a simple guide for how to do a step-by-step docum
 The figure below illustrates the documentation of step 1 to 3, where a **computation class** is related to a **software individual** and the types of datasets (i.e. **dataset classes**) it takes as input and output. It is important to realise that at this level of the documentation we 
 focus on documenting the processes that we can run and their relationships to potential real datasets. 
 
+
 ![Documentation of step 1 to 3.](https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/datadoc-example/examples/tools/figs/computation.svg)
 
 ### Documenting the actual datasets and executed workflows ###

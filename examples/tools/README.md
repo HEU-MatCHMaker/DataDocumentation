@@ -4,10 +4,10 @@ Semantic documentation of tools, datasets and workflows
 This example is intended to be a simple guide for how to do a step-by-step documentation of
 
 - [Semantic documentation of tools, datasets and workflows](#semantic-documentation-of-tools-datasets-and-workflows)
-    - [Important underlying principles](#important-underlying-principles)
-    - [Documenting the processes and their relationships to potential real datasets](#documenting-the-processes-and-their-relationships-to-potential-real-datasets)
-    - [Documenting the actual datasets and executed workflows](#documenting-the-actual-datasets-and-executed-workflows)
-    - [How to do this in practice](#how-to-do-this-in-practice)
+  - [Important underlying principles](#important-underlying-principles)
+  - [Documenting the processes and their relationships to potential real datasets](#documenting-the-processes-and-their-relationships-to-potential-real-datasets)
+  - [Documenting the actual datasets and executed workflows](#documenting-the-actual-datasets-and-executed-workflows)
+  - [How to do this in practice](#how-to-do-this-in-practice)
   - [1. Documentation of software tools](#1-documentation-of-software-tools)
   - [2. Documentation of related resources](#2-documentation-of-related-resources)
   - [3. Documentation of dataset types](#3-documentation-of-dataset-types)
@@ -17,21 +17,22 @@ This example is intended to be a simple guide for how to do a step-by-step docum
 
 ### Important underlying principles ###
 
-- **Individuals versus Classes**: 
+- **Individuals versus Classes**:
     We distinguish between individuals and classes. Individuals are specific instances of a concept, while classes are general categories that can have multiple instances. For example, a specific software tool would be an individual, while the category of software tools would be a class.
 
 
 ### Documenting the processes and their relationships to potential real datasets ###
-The figure below illustrates the documentation of step 1 to 3, where a **computation class** is related to a **software individual** and the types of datasets (i.e. **dataset classes**) it takes as input and output. It is important to realise that at this level of the documentation we 
-focus on documenting the processes that we can run and their relationships to potential real datasets. 
+
+The figure below illustrates the documentation of step 1 to 3, where a **computation class** is related to a **software individual** and the types of datasets (i.e. **dataset classes**) it takes as input and output. It is important to realise that at this level of the documentation we
+focus on documenting the processes that we can run and their relationships to potential real datasets.
 
 
 ![Documentation of step 1 to 3.](https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/datadoc-example/examples/tools/figs/computation.svg)
 
 ### Documenting the actual datasets and executed workflows ###
 
-Once the **types of**  proesses and datasets that we treat have been documented, 
-it is possible to document actual datasets and workflows (step 4 and 5). 
+Once the **types of**  proesses and datasets that we treat have been documented,
+it is possible to document actual datasets and workflows (step 4 and 5).
 This principle on how the classes (the concepts) and individuals (actual instances)
 are related is shown in the figure below.
 

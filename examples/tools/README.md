@@ -61,6 +61,9 @@ Hence, all templates also have a column labeled "@type".
 The values in this column should also be an IRI identifying an ontological concept describing the type of the resource.
 General values for the type are described in the following sections, which also explains how the templates should be filled out.
 
+Each cell should only contain one value.
+If you want to add multiple values to a cell, you can add multiple columns with the same name (easily done in a spreadsheet editor).
+
 
 ### 1. Documentation of software tools ###
 
@@ -160,7 +163,6 @@ In addition to these, there are a set of common columns that also could be inclu
 - **@type**: Note that here, the type refers to the ontological concept (class) that the dataset is an individual of, so this is different from the situation above documenting dataset types.
 - **creator**: URI of the person or organisation creating the dataset.
 - **publisher**: URI of the person or organisation that makes the dataset available.
-- **identifier**: A unique identifier (in addition to the `@id`) of the dataset.
 - **distribution.accessURL**: URL of a resource that gives access to a distribution of the dataset. E.g. a landing page or feed or database.
 - **distribution.accessService**: URL of a data service that gives access to the distribution of the dataset.
 - **distribution.downloadURL**: URL of a downloadable file containing the dataset.

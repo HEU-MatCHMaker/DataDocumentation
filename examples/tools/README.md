@@ -38,7 +38,7 @@ It is important to realise that at this level of the documentation we focus on d
 ### Documenting the actual datasets and executed workflows ###
 
 Once the **types of**  proesses and datasets that we treat have been documented, it is possible to document actual datasets and workflows (step 4 and 5).
-This principle on how the classes (the concepts) and individuals (actual instances) are related is shown in the figure below.
+This principle on how the classes (the concepts) and individuals (actual instances) are related is shown in the Figure below.
 
 ![Documentation of step 4 and 5.](https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/datadoc-example/examples/tools/figs/workflow.svg)
 

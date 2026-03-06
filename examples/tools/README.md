@@ -45,9 +45,8 @@ This principle on how the classes (the concepts) and individuals (actual instanc
 
 ## How to do this in practice ##
 
-The main interface for this semantic documentation is simple spreadsheets with well-defined column headers.
-The names in the column headers are under the hood mapped to ontological concepts via a [JSON-LD] context.
-However, a normal user is not exposed to the complexity of semantic technologies.
+The main interface for this semantic documentation is a set of simple spreadsheets with well-defined column headers.
+The names in the column headers are mapped to ontological concepts via a [JSON-LD] context under the hood, and a normal user is not exposed to the complexity of semantic technologies.
 The important thing to understand is that these headers are not just arbitrary names, but they have a specific meaning in the context of semantic documentation.
 Instead, the user is presented with a simple set of spreadsheet [templates].
 Each documented resource will be a row in one of these templates.

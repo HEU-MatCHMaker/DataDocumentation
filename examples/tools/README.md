@@ -53,7 +53,7 @@ Each documented resource will be a row in one of these templates.
 
 Since the FAIR principles demand that all resources must have a globally [unique and persistent identifier], all the templates have a column labeled "@id".
 This column should contain an IRI.
-These IRIs can be written is as [URI]s, like <https://he-matchmaker.eu/resource/my_software>, or as compact URIs (so-called [CURIE]s), like mm:my_software,
+These IRIs can be written as [URI]s, like <https://he-matchmaker.eu/resource/my_software>, or as compact URIs (so-called [CURIE]s), like mm:my_software,
 where the prefix `mm` is a shorthand for the namespace <https://he-matchmaker.eu/resource/>, intended for MatCHMaker-owned resources.
 
 For semantics, it is also important to document the type of the resource.

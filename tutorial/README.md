@@ -33,14 +33,14 @@ Here a **computation class** is related to a **software individual** and the typ
 It is important to realise that at this level of the documentation we focus on documenting the processes that we can run and their relationships to potential real datasets.
 
 
-![Documentation of step 1 to 3.](https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/datadoc-example/examples/tools/figs/computation.svg)
+![Documentation of step 1 to 3.](https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/tutorial/figs/computation.svg)
 
 ### Documenting the actual datasets and executed workflows ###
 
 Once the **types of**  proesses and datasets that we treat have been documented, it is possible to document actual datasets and workflows (step 4 and 5).
 This principle on how the classes (the concepts) and individuals (actual instances) are related is shown in the Figure below.
 
-![Documentation of step 4 and 5.](https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/datadoc-example/examples/tools/figs/workflow.svg)
+![Documentation of step 4 and 5.](https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/tutorial/figs/workflow.svg)
 
 
 ## How to do this in practice ##
@@ -148,12 +148,12 @@ The documentation of datasets will be based on this vocabulary, but may also ext
 
 The table below shows a simple generic example of documentation of a few datasets.
 
-| @id            | @type         | title     | description               | rightsHolder                | license                                        | creator                                 | distribution.downloadURL                                                                                                |
-|----------------|---------------|-----------|---------------------------|-----------------------------|------------------------------------------------|-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| mm:my_dataset1 | mm:MyDataset1 | Dataset 1 | Description of dataset 1. | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://orcid.org/0000-0002-1560-809X> | <https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/examples/tools/data/dataset1.txt> |
-| mm:my_dataset2 | mm:MyDataset2 | Dataset 2 | Description of dataset 2. | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://orcid.org/0000-0002-1560-809X> | <https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/examples/tools/data/dataset2.txt> |
-| mm:my_dataset3 | mm:MyDataset3 | Dataset 3 | Description of dataset 3. | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://orcid.org/0000-0002-1560-809X> | <https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/examples/tools/data/dataset3.txt> |
-| mm:my_dataset4 | mm:MyDataset4 | Dataset 4 | Description of dataset 4. | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://orcid.org/0000-0002-1560-809X> | <https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/examples/tools/data/dataset4.txt> |
+| @id            | @type         | title     | description               | rightsHolder                | license                                        | creator                                 | distribution.downloadURL                                                                                          |
+|----------------|---------------|-----------|---------------------------|-----------------------------|------------------------------------------------|-----------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| mm:my_dataset1 | mm:MyDataset1 | Dataset 1 | Description of dataset 1. | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://orcid.org/0000-0002-1560-809X> | <https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/tutorial/data/dataset1.txt> |
+| mm:my_dataset2 | mm:MyDataset2 | Dataset 2 | Description of dataset 2. | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://orcid.org/0000-0002-1560-809X> | <https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/tutorial/data/dataset2.txt> |
+| mm:my_dataset3 | mm:MyDataset3 | Dataset 3 | Description of dataset 3. | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://orcid.org/0000-0002-1560-809X> | <https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/tutorial/data/dataset3.txt> |
+| mm:my_dataset4 | mm:MyDataset4 | Dataset 4 | Description of dataset 4. | <https://ror.org/0422tvz87> | <https://creativecommons.org/licenses/by/4.0/> | <https://orcid.org/0000-0002-1560-809X> | <https://raw.githubusercontent.com/HEU-MatCHMaker/DataDocumentation/refs/heads/master/tutorial/data/dataset4.txt> |
 
 It is often possible to generate the above table using a script that traverse the folder structure where you have your datasets are stored.
 
@@ -213,12 +213,12 @@ The meaning of the added columns are:
 
 ## List of templates ##
 
-- [agents.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/agents.csv)
-- [computations.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/computations.csv)
-- [computation-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/computation-classes.csv)
-- [datasets.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/datasets.csv)
-- [dataset-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/dataset-classes.csv)
-- [software.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/software.csv)
+- [agents.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/agents.csv)
+- [computations.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/computations.csv)
+- [computation-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/computation-classes.csv)
+- [datasets.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/datasets.csv)
+- [dataset-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/dataset-classes.csv)
+- [software.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/software.csv)
 
 
 These templates can be extended with additional columns.
@@ -242,9 +242,9 @@ See [user-defined keywords] in the [Tripper] documentation for how to extend the
 [Tripper]: https://emmc-asbl.github.io/tripper/
 [pre-defined keywords]: https://emmc-asbl.github.io/tripper/latest/datadoc/keywords/
 [user-defined keywords]: https://emmc-asbl.github.io/tripper/latest/datadoc/customisation/#user-defined-keywords
-[templates]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates
-[software template]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/software.csv
-[agents template]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/examples/tools/templates/agents.csv
+[templates]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates
+[software template]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/software.csv
+[agents template]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/agents.csv
 [owl:Class]: http://www.w3.org/2002/07/owl#Class
 [emmo:Computation]: https://w3id.org/emmo#Computation
 [emmo:Dataset]: https://w3id.org/emmo#Dataset

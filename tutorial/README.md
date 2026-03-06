@@ -220,7 +220,7 @@ The meaning of the added columns are:
 - [computation-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/blob/master/tutorial/templates/computation-classes.csv):
   For computation types to software (step 3)
 - [dataset-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/blob/master/tutorial/templates/dataset-classes.csv):
-  For input and output dataset types of types of computations (step 3, updated in step 6)
+  For input and output dataset types of types of computations (step 3)
 - [datasets.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/blob/master/tutorial/templates/datasets.csv):
   Actual datasets (step 4)
 - [computations.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/blob/master/tutorial/templates/computations.csv):
@@ -249,8 +249,8 @@ See [user-defined keywords] in the [Tripper] documentation for how to extend the
 [pre-defined keywords]: https://emmc-asbl.github.io/tripper/latest/datadoc/keywords/
 [user-defined keywords]: https://emmc-asbl.github.io/tripper/latest/datadoc/customisation/#user-defined-keywords
 [templates]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates
-[software template]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/software.csv
-[agents template]: https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/agents.csv
+[software template]: https://github.com/HEU-MatCHMaker/DataDocumentation/blob/master/tutorial/templates/software.csv
+[agents template]: https://github.com/HEU-MatCHMaker/DataDocumentation/blob/master/tutorial/templates/agents.csv
 [owl:Class]: http://www.w3.org/2002/07/owl#Class
 [emmo:Computation]: https://w3id.org/emmo#Computation
 [emmo:Dataset]: https://w3id.org/emmo#Dataset

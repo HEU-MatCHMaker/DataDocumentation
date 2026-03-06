@@ -213,12 +213,18 @@ The meaning of the added columns are:
 
 ## List of templates ##
 
-- [agents.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/agents.csv)
-- [computations.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/computations.csv)
-- [computation-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/computation-classes.csv)
-- [datasets.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/datasets.csv)
-- [dataset-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/dataset-classes.csv)
-- [software.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/software.csv)
+- [software.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/software.csv):
+  Documenting existing software (step 1, updated in step 2)
+- [agents.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/agents.csv):
+  For persons and organisations. Not strictly necessary, but may useful for overview (step 2)
+- [computation-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/computation-classes.csv):
+  For computation types to software (step 3)
+- [dataset-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/dataset-classes.csv):
+  For input and output dataset types of types of computations (step 3, updated in step 6)
+- [datasets.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/datasets.csv):
+  Actual datasets (step 4)
+- [computations.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/computations.csv):
+  For provenance of executed workflows (step 5)
 
 
 These templates can be extended with additional columns.

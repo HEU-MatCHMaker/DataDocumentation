@@ -28,7 +28,7 @@ Individuals are specific instances of a concept, while classes are general categ
 
 ### Documenting the processes and their relationships to potential real datasets ###
 
-The figure below illustrates the documentation of software tools the type of computation they implements and the type of datasets it takes as input and output (step 1 to 3 under [How to do this in practice](#how-to-do-this-in-practice)).
+The Figure below illustrates the documentation of software tools, the type of computation that makes use of it and the types of datasets the computation takes as input and output (step 1 to 3 under [How to do this in practice](#how-to-do-this-in-practice)).
 Here a **computation class** is related to a **software individual** and the types of datasets (i.e. **dataset classes**) it takes as input and output.
 It is important to realise that at this level of the documentation we focus on documenting the processes that we can run and their relationships to potential real datasets.
 

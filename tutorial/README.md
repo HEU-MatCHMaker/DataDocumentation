@@ -15,7 +15,7 @@ The aim of the documentation is to enhance reusability by providing context in t
   - [4. Documentation of actual datasets](#4-documentation-of-actual-datasets)
   - [5. Documentation of executed workflows](#5-documentation-of-executed-workflows)
   - [6. Documentation of content of datasets](#6-documentation-of-content-of-datasets)
--[List of templates](#list-of-templates)
+- [List of templates](#list-of-templates)
 
 
 ## Important underlying principles ##
@@ -213,17 +213,17 @@ The meaning of the added columns are:
 
 ## List of templates ##
 
-- [software.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/software.csv):
+- [software.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/blob/master/tutorial/templates/software.csv):
   Documenting existing software (step 1, updated in step 2)
-- [agents.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/agents.csv):
+- [agents.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/blob/master/tutorial/templates/agents.csv):
   For persons and organisations. Not strictly necessary, but may useful for overview (step 2)
-- [computation-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/computation-classes.csv):
+- [computation-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/blob/master/tutorial/templates/computation-classes.csv):
   For computation types to software (step 3)
-- [dataset-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/dataset-classes.csv):
+- [dataset-classes.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/blob/master/tutorial/templates/dataset-classes.csv):
   For input and output dataset types of types of computations (step 3, updated in step 6)
-- [datasets.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/datasets.csv):
+- [datasets.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/blob/master/tutorial/templates/datasets.csv):
   Actual datasets (step 4)
-- [computations.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/tree/master/tutorial/templates/computations.csv):
+- [computations.csv](https://github.com/HEU-MatCHMaker/DataDocumentation/blob/master/tutorial/templates/computations.csv):
   For provenance of executed workflows (step 5)
 
 

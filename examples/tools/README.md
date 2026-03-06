@@ -157,6 +157,7 @@ It is often possible to generate the above table using a script that traverse th
 Most of the columns have already been described above, except for `creator` and `distribution.downloadURL`.
 In addition to these, there are a set of common columns that also could be included:
 
+- **@type**: Note that here, the type refers to the ontological concept (class) that the dataset is an individual of, so this is different from the situation above documenting dataset types.
 - **creator**: URI of the person or organisation creating the dataset.
 - **publisher**: URI of the person or organisation that makes the dataset available.
 - **identifier**: A unique identifier (in addition to the `@id`) of the dataset.

@@ -1,6 +1,6 @@
 # Semantic documentation of tools, datasets and workflows
 
-This example is intended to be a simple guide for how to step-by-step semantically document software tools, datasets and workflows.
+This example is intended to be a simple step-by-step guide for how to semantically document software tools, datasets and workflows.
 
 The aim of the documentation is to enhance reusability by providing context in the form of [linked data], that relates the various resources to each other using relations with semantically well-defined meaning.
 

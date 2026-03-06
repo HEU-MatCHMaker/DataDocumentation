@@ -107,7 +107,7 @@ However, the [agents template] may still be useful to fill out to ensure that we
 
 ### 3. Documentation of computation and dataset types ###
 
-As shown in the first figure on this page, we want to document the computation procedure and relate it to the software with which the computation is performed as well as to the types of datasets it takes as input and output.
+As shown in the first Figure on this page, we want to document the computation procedure and relate it to the software with which the computation is performed as well as to the types of datasets it takes as input and output.
 As mentioned [above](#documenting-the-processes-and-their-relationships-to-potential-real-datasets), it is important to notice that we here want to document a computation procedure (that can be executed many times) and not a specific execution.
 The same is the case for the dataset types.
 It is not actual datasets we want to document, but the type of datasets that the computation takes as input and output.

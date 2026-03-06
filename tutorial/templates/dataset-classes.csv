@@ -1,0 +1,5 @@
+@id,@type,subClassOf,label,definition
+mm:MyDataset1,owl:Class,emmo:Dataset,MyDataset1,Definition of dataset 1.
+mm:MyDataset2,owl:Class,emmo:Dataset,MyDataset2,Definition of dataset 2.
+mm:MyDataset3,owl:Class,emmo:Dataset,MyDataset3,Definition of dataset 3.
+mm:MyDataset4,owl:Class,emmo:Dataset,MyDataset4,Definition of dataset 4.

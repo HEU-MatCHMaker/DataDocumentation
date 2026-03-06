@@ -1,0 +1,4 @@
+@id,@type,description,hasInput,hasOutput
+mm:my_computation1,mm:MyComputation1,,mm:my_dataset1,mm:my_dataset2
+mm:my_computation2,mm:MyComputation2,,mm:my_dataset2,mm:my_dataset3
+mm:my_computation3,mm:MyComputation3,,mm:my_dataset3,mm:my_dataset4

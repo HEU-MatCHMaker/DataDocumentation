@@ -139,7 +139,8 @@ Meaning of the columns:
 
 ### 4. Documentation of actual datasets ###
 
-W3C has created the [DCAT] vocabulary as a standard way to document datasets.
+We are now at the stage where we can document actual existing datasets.
+W3C has created the [DCAT] vocabulary as a standard way to document datasets, which is widely adopted in the EU.
 The documentation of datasets will be based on this vocabulary, but may extended with additional concepts needed for describing materials science datasets.
 
 The table below shows a simple generic example of documentation of a few datasets.

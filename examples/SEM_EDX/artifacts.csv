@@ -1,0 +1,3 @@
+@id,@type,@type,title,description,usesFramework,version
+mm:clustering_utils_script,emmo:Software,aot:Artifact,Clustering pipeline,Preprocessing + User Interaction + GMM fitting + Visualisations,scikit-learn + tkinter + matplotlib,1.x
+mm:unmixing_mass_analysis_script,emmo:Software,aot:Artifact,Unmixing pipeline,Hydrate unmixing + Mass fraction computations,scikit-learn + numpy + matplotlib,1.x

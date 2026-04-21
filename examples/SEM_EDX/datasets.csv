@@ -1,4 +1,4 @@
-﻿@id,@type,subClassOf,subClassOf,title,description,distribution.mediaType,format,distribution.accessService.parser,conformsTo
+@id,@type,subClassOf,subClassOf,title,description,distribution.mediaType,format,distribution.accessService.parser,conformsTo
 mm:cement_EDX_measurements,owl:Class,emmo:Dataset,temgo:EDSComposition,Image element composition,Tabular data in atomic percentage with at least Si Al Ca C O Mg Fe S,iana:text/csv,,,
 mm:cement_SEM_measurements,owl:Class,emmo:Dataset,temgo:SEMImage,BSE image,Tabular data or image in grey scale level of BSE measurement,iana:image/tiff,,,
 mm:cement_SEM_EDX_inputdata,owl:Class,emmo:Dataset,,Input numpy file for semi automatic workflow,Numpy file containing all the EDX and SEM images (one per channel) and the list of corresponding channels,,npy,,
